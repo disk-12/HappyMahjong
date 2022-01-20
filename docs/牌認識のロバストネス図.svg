@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="222px" preserveAspectRatio="none" style="width:830px;height:222px;background:#FFFFFF;" version="1.1" viewBox="0 0 830 222" width="830px" zoomAndPan="magnify"><defs><filter height="300%" id="f1jf1e2kmc7tye" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[2bbeed1e4589b316384864ac0d040eb2]
+entity ユーザ--><ellipse cx="34" cy="14" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M34,22 L34,49 M21,30 L47,30 M34,49 L21,64 M34,49 L47,64 " fill="none" filter="url(#f1jf1e2kmc7tye)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="13" y="82.4951">ユーザ</text><!--MD5=[d5d3f70e57e7473b5658592241772fb6]
+entity オプションフォーム--><path d="M267.5,81 L267.5,105 M267.5,93 L284.5,93 " fill="none" filter="url(#f1jf1e2kmc7tye)" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="296.5" cy="93" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="225" y="121.9951">オプションフォーム</text><!--MD5=[1240ee899b641a1a32a85e0ab541531c]
+entity 撮影画面--><path d="M13.5,125 L13.5,149 M13.5,137 L30.5,137 " fill="none" filter="url(#f1jf1e2kmc7tye)" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="42.5" cy="137" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="6" y="165.9951">撮影画面</text><!--MD5=[1ec7ad5c58d8da81a584a983e8349752]
+entity 確認画面--><path d="M573.5,52 L573.5,76 M573.5,64 L590.5,64 " fill="none" filter="url(#f1jf1e2kmc7tye)" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="602.5" cy="64" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="566" y="92.9951">確認画面</text><!--MD5=[df2eca178bd7f954cfcf4acb6a94ddd5]
+entity 牌認識--><ellipse cx="288" cy="185" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="284,173,290,168,288,173,290,178,284,173" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="267" y="213.9951">牌認識</text><!--MD5=[e58c92f71c794bc27749c6186269d6a1]
+entity 認識エラーを表示--><ellipse cx="594" cy="185" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="590,173,596,168,594,173,596,178,590,173" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="538" y="213.9951">認識エラーを表示</text><!--MD5=[5b4753301a35ffdc2aaf75c46920069d]
+entity 牌を変更する--><ellipse cx="767" cy="23" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="763,11,769,6,767,11,769,16,763,11" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="725" y="51.9951">牌を変更する</text><!--MD5=[0efff3330c647f8cffa283e79c2b42b9]
+entity 和了牌を変更する--><ellipse cx="767" cy="106" fill="#FEFECE" filter="url(#f1jf1e2kmc7tye)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="763,94,769,89,767,94,769,99,763,94" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="711" y="134.9951">和了牌を変更する</text><!--MD5=[4bdbd0968c9fd0796a9999d05df29bfb]
+link ユーザ to 撮影画面--><path d="M34,85.55 C34,95.55 34,105.55 34,115.55 " fill="none" id="ユーザ-to-撮影画面" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="34,120.78,38,111.78,34,115.78,30,111.78,34,120.78" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d17f82c9836bbdbe96957e6f2a0b1769]
+link ユーザ to オプションフォーム--><path d="M55.2,49.49 C90.51,57.34 164.96,73.88 220.01,86.11 " fill="none" id="ユーザ-to-オプションフォーム" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="224.94,87.21,217.0057,81.375,220.0561,86.139,215.2921,89.1893,224.94,87.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[499a96c44432df00c2b842c106772260]
+link ユーザ to 確認画面--><path d="M55.01,42.38 C65.92,41.07 79.68,39.65 92,39 C115.97,37.74 122.02,38.12 146,39 C301.68,44.74 487.23,61.68 560.73,68.8 " fill="none" id="ユーザ-to-確認画面" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="565.83,69.29,557.2616,64.4338,560.8537,68.8038,556.4837,72.3959,565.83,69.29" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="222" x="177" y="37.0669">[牌が誤っている,和了った牌が異なる]</text><!--MD5=[58f1fb8fca2944c30aefbb59258b2b37]
+link 撮影画面 to オプションフォーム--><path d="M62.28,135.33 C71.61,132.3 82.17,129.19 92,127 C133.95,117.65 181.78,111.21 219.57,107.08 " fill="none" id="撮影画面-to-オプションフォーム" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="224.6,106.54,215.219,103.5406,219.6295,107.0828,216.0874,111.4933,224.6,106.54" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="106" y="113.0669">表示</text><!--MD5=[80689f9fe072541b7de3efb3f1649278]
+link オプションフォーム to 撮影画面--><path d="M233.97,125.13 C208.03,135.64 176,146.74 146,152 C122.36,156.14 115.96,153.47 92,152 C84.08,151.52 75.57,150.65 67.6,149.7 " fill="none" id="オプションフォーム-to-撮影画面" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="62.19,149.03,70.6298,154.1064,67.152,149.6449,71.6136,146.1672,62.19,149.03" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="99.5" y="148.0669">非表示</text><!--MD5=[55eae8eb46d3ecb326112092d2c23286]
+link 撮影画面 to 牌認識--><path d="M62.09,165.33 C71.15,171.08 81.6,176.68 92,180 C150.39,198.61 223.45,197.43 261.42,195.12 " fill="none" id="撮影画面-to-牌認識" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="266.76,194.78,257.5164,191.3805,261.7708,195.1088,258.0425,199.3632,266.76,194.78" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="93" y="176.0669">撮影する</text><!--MD5=[ddace5aabedc44e2de2c2e0c7dffbb06]
+link 牌認識 to 認識エラーを表示--><path d="M309.42,193 C354.38,193 463.4,193 532.41,193 " fill="none" id="牌認識-to-認識エラーを表示" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="537.72,193,528.72,189,532.72,193,528.72,197,537.72,193" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76" x="431" y="189.0669">[牌の数&lt;14]</text><!--MD5=[c878bce2084dbbfa555b35f2289bc4cb]
+link 牌認識 to 確認画面--><path d="M309.42,184.87 C361.32,164.22 498.59,109.58 561.14,84.68 " fill="none" id="牌認識-to-確認画面" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="565.87,82.8,556.0292,82.4025,561.2227,84.6446,558.9806,89.8382,565.87,82.8" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="438" y="104.0669">[認識成功]</text><!--MD5=[31e4e5bffa2c99ff7b6427f6e0026b71]
+link 確認画面 to 牌を変更する--><path d="M622.1,65.5 C648.29,59.22 688.49,49.59 719.75,42.09 " fill="none" id="確認画面-to-牌を変更する" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="724.68,40.91,714.993,39.1316,719.8194,42.0823,716.8687,46.9086,724.68,40.91" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1a4dbc79fe4706f243fbfd0a7c0df8f9]
+link 確認画面 to 和了牌を変更する--><path d="M622.1,78.66 C644.53,84.17 677.24,92.2 705.81,99.22 " fill="none" id="確認画面-to-和了牌を変更する" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="710.72,100.42,702.9254,94.3997,705.8626,99.2342,701.0281,102.1715,710.72,100.42" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d9ba976b365cebd00ea95c3fcc7bfadd]
+@startuml
+left to right direction
+
+actor ユーザ
+boundary オプションフォーム
+boundary 撮影画面
+boundary 確認画面
+control 牌認識
+control 認識エラーを表示
+control 牌を変更する
+control 和了牌を変更する
+
+ユーザ -> 撮影画面
+ユーザ -> オプションフォーム
+ユーザ -> 確認画面:[牌が誤っている,和了った牌が異なる]
+
+撮影画面 - -> オプションフォーム:表示
+オプションフォーム - -> 撮影画面:非表示
+
+撮影画面 - -> 牌認識:撮影する
+牌認識 - -> 認識エラーを表示:[牌の数<14]
+牌認識 - -> 確認画面:[認識成功]
+
+確認画面 - -> 牌を変更する
+確認画面 - -> 和了牌を変更する
+@enduml
+
+PlantUML version 1.2021.12(Tue Oct 05 16:01:58 UTC 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
