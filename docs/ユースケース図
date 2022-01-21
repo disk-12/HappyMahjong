@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="335px" preserveAspectRatio="none" style="width:1542px;height:335px;background:#FFFFFF;" version="1.1" viewBox="0 0 1542 335" width="1542px" zoomAndPan="magnify"><defs><filter height="300%" id="f1ffyd5ho808xm" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[a76c85a530b7bcdeb396d01a6b1eeda2]
+cluster UseCase--><polygon fill="#FFFFFF" filter="url(#f1ffyd5ho808xm)" points="16,6,91,6,98,28.2969,1525,28.2969,1525,328,16,328,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="98" y1="28.2969" y2="28.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="69" x="20" y="20.9951">UseCase</text><!--MD5=[39f6862c9c03bae993b85c78dc0eaf9a]
+cluster 点数計算アプリ--><rect fill="#FFFFFF" filter="url(#f1ffyd5ho808xm)" height="255" style="stroke:#000000;stroke-width:1.5;" width="1288" x="213" y="49"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="98" x="808" y="63.9951">点数計算アプリ</text><!--MD5=[8fc3522a43f8c7199df5e09e5bb0188e]
+entity user--><ellipse cx="53" cy="203" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M53,211 L53,238 M40,219 L66,219 M53,238 L40,253 M53,238 L66,253 " fill="none" filter="url(#f1ffyd5ho808xm)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="32" y="271.4951">ユーザ</text><ellipse cx="300.8142" cy="268.7628" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="66.8142" ry="15.7628" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="255.8142" y="272.5104">カメラで撮る</text><ellipse cx="300.9293" cy="197.7859" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="71.9293" ry="16.7859" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="248.9293" y="201.5334">点数を計算する</text><ellipse cx="614.8142" cy="271.7628" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="66.8142" ry="15.7628" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="569.8142" y="275.5104">牌を認識する</text><ellipse cx="1029.9293" cy="261.7859" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="71.9293" ry="16.7859" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="977.9293" y="265.5334">確認画面を表示</text><ellipse cx="614.8356" cy="111.9671" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="127.8356" ry="27.9671" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="224" x="502.8356" y="114.8138">役一覧，飜数，符、合計点数を表示</text><ellipse cx="614.7923" cy="197.7585" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="101.7923" ry="22.7585" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="530.7923" y="200.6051">「役がありません」と表示</text><ellipse cx="1407.3536" cy="224.8707" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="77.3536" ry="17.8707" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="1348.6333" y="228.5454">牌を選択しなおす</text><ellipse cx="1030.241" cy="183.1482" fill="#FEFECE" filter="url(#f1ffyd5ho808xm)" rx="121.241" ry="26.6482" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="210" x="925.241" y="185.9949">「認識できませんでした」と表示</text><!--MD5=[7ae5c6bd1d778737f04c1a399a2e85e6]
+link user to TAKE_PIC--><path d="M74.17,241.54 C83.18,244.62 94,247.94 104,250 C145.34,258.52 192.39,263.24 230.03,265.84 " fill="none" id="user-to-TAKE_PIC" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="235.04,266.18,226.3356,261.572,230.0518,265.837,225.7868,269.5531,235.04,266.18" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[4ad788f2fbf724ce226756b028516ccc]
+link TAKE_PIC to DETECT_HAI--><path d="M368.17,269.64 C419.46,270.13 490.41,270.81 542.91,271.32 " fill="none" id="TAKE_PIC-to-DETECT_HAI" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="547.93,271.36,538.9763,267.2574,542.9303,271.3029,538.8849,275.2569,547.93,271.36" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0ee7b7cce04c6ac0a2ecb06c81b50743]
+link DETECT_HAI to CHECK_HAI--><path d="M681.9,270.4 C755.77,268.62 875.36,265.72 953.09,263.84 " fill="none" id="DETECT_HAI-to-CHECK_HAI" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="958.15,263.72,949.0609,259.9267,953.1513,263.8343,949.2438,267.9246,958.15,263.72" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8d8c1b44590e687b358179d042e6c96a]
+link DETECT_HAI to MISS_DETECT--><path d="M665.41,261.35 C732.69,246.85 854.34,220.64 938.28,202.55 " fill="none" id="DETECT_HAI-to-MISS_DETECT" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="943.26,201.48,933.6176,199.4738,938.3731,202.5374,935.3095,207.2929,943.26,201.48" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="774" y="213.0669">認識できなかった</text><!--MD5=[78d8e4eab3dc8033cf6a91db9906afdf]
+link CHECK_HAI to SELECT_HAI--><path d="M1100.82,265.4 C1155.38,266.87 1232.94,266.33 1300,256 C1319.75,252.96 1340.98,247.29 1359.25,241.63 " fill="none" id="CHECK_HAI-to-SELECT_HAI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1364.32,240.03,1354.5347,238.9132,1359.5501,241.5295,1356.9339,246.545,1364.32,240.03" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="1182" y="252.0669">和了った牌が異なる</text><!--MD5=[78d8e4eab3dc8033cf6a91db9906afdf]
+link CHECK_HAI to SELECT_HAI--><path d="M1083.85,250.7 C1112.47,245.04 1148.52,238.63 1181,235 C1228.44,229.7 1281.78,227.18 1324.67,226 " fill="none" id="CHECK_HAI-to-SELECT_HAI-1" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1329.85,225.86,1320.7394,222.1187,1324.852,226.0028,1320.9679,230.1154,1329.85,225.86" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104" x="1188.5" y="223.0669">誤ってる牌がある</text><!--MD5=[79e3fb3d5352fcd434ebc03edc0e407e]
+link user to CALC--><path d="M74.13,231.05 C108.7,225.99 180.8,215.44 234.28,207.62 " fill="none" id="user-to-CALC" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="239.4,206.87,229.9129,204.2252,234.4534,207.5991,231.0795,212.1397,239.4,206.87" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="105" y="210.0669">牌を認識済の時</text><!--MD5=[1ef87b18ec0c9ae8892b3d57810fcdb2]
+link CALC to SHOW_SCORE--><path d="M348.71,185.12 C396.41,171.98 471.51,151.28 529.65,135.25 " fill="none" id="CALC-to-SHOW_SCORE" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="534.51,133.91,524.7713,132.4409,529.6892,135.2364,526.8936,140.1543,534.51,133.91" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="410.5" y="154.0669">役成立</text><!--MD5=[4029ea51f6c6e111cebcedd9f30e106a]
+link CALC to ERROR--><path d="M373.19,198 C413.02,198 463.45,198 507.85,198 " fill="none" id="CALC-to-ERROR" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="512.96,198,503.96,194,507.96,198,503.96,202,512.96,198" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="404" y="194.0669">役不成立</text><!--MD5=[32c97391b520cb6ad2293501329220dd]
+@startuml
+left to right direction
+
+hide circle
+hide method
+
+package UseCase {
+
+    actor ユーザ as user
+    rectangle 点数計算アプリ {
+        usecase "カメラで撮る" as TAKE_PIC
+        usecase "点数を計算する" as CALC
+        usecase "牌を認識する" as DETECT_HAI
+        usecase "確認画面を表示" as CHECK_HAI
+        usecase "役一覧，飜数，符、合計点数を表示" as SHOW_SCORE
+        usecase "「役がありません」と表示" as ERROR
+        usecase "牌を選択しなおす" as SELECT_HAI
+        usecase "「認識できませんでした」と表示" as MISS_DETECT
+    }
+    user - -> TAKE_PIC
+        TAKE_PIC - -> DETECT_HAI
+        DETECT_HAI - -> CHECK_HAI
+            DETECT_HAI ..> MISS_DETECT : 認識できなかった
+            CHECK_HAI ..> SELECT_HAI : 和了った牌が異なる
+            CHECK_HAI ..> SELECT_HAI : 誤ってる牌がある
+    user ..> CALC : 牌を認識済の時
+        CALC ..> SHOW_SCORE : 役成立
+        CALC ..> ERROR : 役不成立
+        
+}
+@enduml
+
+PlantUML version 1.2021.12(Tue Oct 05 16:01:58 UTC 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
