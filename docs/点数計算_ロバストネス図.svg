@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="231px" preserveAspectRatio="none" style="width:471px;height:231px;background:#FFFFFF;" version="1.1" viewBox="0 0 471 231" width="471px" zoomAndPan="magnify"><defs><filter height="300%" id="f8xahcoecpber" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[dcdbfd077e02e4cf4f5f3db90961366d]
+entity ユーザー--><ellipse cx="69" cy="14" fill="#FEFECE" filter="url(#f8xahcoecpber)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><path d="M69,22 L69,49 M56,30 L82,30 M69,49 L56,64 M69,49 L82,64 " fill="none" filter="url(#f8xahcoecpber)" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="41" y="82.4951">ユーザー</text><!--MD5=[ac3b686970e99869dcb9505f6bbae19a]
+entity 手牌表示画面--><path d="M48.5,141 L48.5,165 M48.5,153 L65.5,153 " fill="none" filter="url(#f8xahcoecpber)" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="77.5" cy="153" fill="#FEFECE" filter="url(#f8xahcoecpber)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="84" x="27" y="181.9951">手牌表示画面</text><!--MD5=[f8f54d0e19384b82d806a53468b58ff7]
+entity 点数計算結果画面--><path d="M387.5,99 L387.5,123 M387.5,111 L404.5,111 " fill="none" filter="url(#f8xahcoecpber)" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="416.5" cy="111" fill="#FEFECE" filter="url(#f8xahcoecpber)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="352" y="139.9951">点数計算結果画面</text><!--MD5=[61d1ead5e32820eafca9d643717a2b12]
+entity 役なし表示画面--><path d="M387.5,182 L387.5,206 M387.5,194 L404.5,194 " fill="none" filter="url(#f8xahcoecpber)" style="stroke:#A80036;stroke-width:1.5;"/><ellipse cx="416.5" cy="194" fill="#FEFECE" filter="url(#f8xahcoecpber)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="359" y="222.9951">役なし表示画面</text><!--MD5=[527388b2d31999407ffd39654eda6aa0]
+entity 点数計算--><ellipse cx="200" cy="153" fill="#FEFECE" filter="url(#f8xahcoecpber)" rx="12" ry="12" style="stroke:#A80036;stroke-width:1.5;"/><polygon fill="#A80036" points="196,141,202,136,200,141,202,146,196,141" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="172" y="181.9951">点数計算</text><!--MD5=[3d83b097f67d897a1fcf8bc2e9e1671d]
+link ユーザー to 手牌表示画面--><path d="M69,85.91 C69,100.99 69,117.75 69,131.61 " fill="none" id="ユーザー-to-手牌表示画面" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="69,136.96,73,127.96,69,131.96,65,127.96,69,136.96" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="7" y="115.8169">[牌が認識済の時]</text><!--MD5=[20b6abade904b120742f9f2a02d17636]
+link 手牌表示画面 to 点数計算--><path d="M111.17,161 C129.08,161 149.76,161 166.56,161 " fill="none" id="手牌表示画面-to-点数計算" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="171.64,161,162.6515,156.9743,166.64,160.9857,162.6286,164.9743,171.64,161" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ef3e67b873aecaa445bc3d5f0ca806cd]
+link 点数計算 to 点数計算結果画面--><path d="M228.36,155.42 C258.31,149.32 307.29,139.33 346.4,131.36 " fill="none" id="点数計算-to-点数計算結果画面" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="351.6,130.29,341.9819,128.1704,346.701,131.2898,343.5816,136.0089,351.6,130.29" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="265.5" y="134.0669">[役成立]</text><!--MD5=[2d539b2e7f396d6842e8408770f016cb]
+link 点数計算 to 役なし表示画面--><path d="M228.02,170.46 C237.42,173.51 248.1,176.69 258,179 C289.31,186.32 324.89,191.91 353.42,195.74 " fill="none" id="点数計算-to-役なし表示画面" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="358.66,196.44,350.2637,191.292,353.7034,195.7829,349.2124,199.2226,358.66,196.44" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62" x="259" y="175.0669">[役不成立]</text><!--MD5=[7f6c8d55cfde16f2212ab369d907c1b2]
+@startuml
+left to right direction
+actor ユーザー
+boundary 手牌表示画面
+boundary 点数計算結果画面
+boundary 役なし表示画面
+control 点数計算
+
+ユーザー -> 手牌表示画面:[牌が認識済の時]
+手牌表示画面 - -> 点数計算
+点数計算 - -> 点数計算結果画面:[役成立]
+点数計算 - -> 役なし表示画面:[役不成立]
+@enduml
+
+PlantUML version 1.2021.12(Tue Oct 05 16:01:58 UTC 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
