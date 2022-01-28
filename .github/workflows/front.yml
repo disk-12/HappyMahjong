@@ -16,7 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1 
       - name: yarn install
-        run: yarn install
+        run: 
+          yarn install
+          cd frontend
       - name: eslint review
         uses: reviewdog/action-eslint@v1
         with:
