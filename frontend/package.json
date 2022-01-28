@@ -24,7 +24,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --check src/**/*.{jsx,js,tsx,ts,css,scss,md,json}",
+    "lint": "eslint src/**/*.{jsx,js,tsx,ts}",
+    "lint:fix": "eslint --fix src/**/*.{jsx,js,tsx,ts} && prettier --write .",
+    "format:fix": "prettier --write src/**/*.{jsx,js,tsx,ts,css,scss,md,json}"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,7 +46,8 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2"
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "prettier": "2.5.1"
   },
   "jest": {
     "moduleFileExtensions": [
