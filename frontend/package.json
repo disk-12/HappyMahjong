@@ -61,9 +61,6 @@
       "ts-jest": {
         "tsConfig": "tsconfig.json"
       }
-    },
-    "testMatch": [
-      "**/tests/**/*.test.ts"
-    ]
+    }
   }
 }
