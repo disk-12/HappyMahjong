@@ -3,13 +3,15 @@ import "./Top.scss";
 import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector, add } from "../../app/HaiListSlice";
 import { Link } from "react-router-dom";
-import { Hai } from 'components/Hai'
+import { Hai } from "components/Hai";
+import { HaiSelector } from "components/HaiSelector/HaiSelector";
 interface Props {}
 
 export const Top: React.FC<Props> = ({}) => {
   const dispatch = useAppDispatch();
 
   const haiList = useAppSelector(haiListSelector);
+
   console.log(haiList);
   return (
     <>
@@ -31,6 +33,8 @@ export const Top: React.FC<Props> = ({}) => {
       <br />
       <Link to="/check">確認画面へ遷移</Link>
       <Hai type="s" number={1}></Hai>
+      <HaiSelector isType initSelected={0} />
+      <HaiSelector type="m" initSelected={0} />
     </>
   );
 };
