@@ -3,6 +3,7 @@ import "./Top.scss";
 import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector, add } from "../../app/HaiListSlice";
 import { Link } from "react-router-dom";
+import { Hai } from 'components/Hai'
 interface Props {}
 
 export const Top: React.FC<Props> = ({}) => {
@@ -19,6 +20,7 @@ export const Top: React.FC<Props> = ({}) => {
       <button onClick={() => dispatch(add("1m"))}>1m追加</button>
       <br />
       <Link to="/check">確認画面へ遷移</Link>
+      <Hai type="s" number={1}></Hai>
     </>
   );
 };
