@@ -1,15 +1,18 @@
-import React from "react";
+import React from 'react';
+import { Img } from './HaiStyle'
 
 type HaiType = 'm'|'p'|'s'|'z'
 
 type Props = {
   type: HaiType,
   number: number,
+  isIcon?: boolean,
 }
 
 export const Hai: React.FC<Props> = ({
   type = 'm',
   number = 1,
+  isIcon,
 }) => {
 
   const isValidNumberMinMax = (min: number, max: number): boolean => {
@@ -34,9 +37,5 @@ export const Hai: React.FC<Props> = ({
 
   const haiSrc = isValidHaiNumber() ? haiLink : defaultHaiLink
 
-  return (
-    <div>
-      <img src={haiSrc} alt={`Hai-${type}-${number}`}/>
-    </div>
-  )
+  return <Img src={haiSrc} alt={`Hai-${type}-${number}`} isIcon={isIcon}/>
 };
