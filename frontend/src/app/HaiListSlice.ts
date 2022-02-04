@@ -7,17 +7,21 @@ export interface swapType {
 }
 export interface changeType {
   index:number,
-  hai:string
+  hai:haiType
+}
+export interface haiType{
+  number:number,
+  type:"m"|"p"|"s"|"z"
 }
 
 const haiListSlice = createSlice({
   name: "haiList",
-  initialState: [] as string[],
+  initialState: [] as haiType[],
   reducers: {
-    add: (state, action:PayloadAction<string>) => {
+    add: (state, action:PayloadAction<haiType>) => {
       return [...state, action.payload];
     },
-    addAll: (state, action:PayloadAction<string[]>) => {
+    addAll: (state, action:PayloadAction<haiType[]>) => {
         return [...state, ...action.payload];
     },
     change: (state, action:PayloadAction<changeType>) => {
