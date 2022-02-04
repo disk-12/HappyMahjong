@@ -13,9 +13,18 @@ export const Check: React.FC<Props> = ({}) => {
     <>
       <h1>確認画面</h1>
       <p>ここは確認画面です．</p>
-      haiList: {haiList.map((x) => x)}
-      <br />
-      <button onClick={() => dispatch(add("1m"))}>1m追加</button>
+      haiList:
+      <ul>
+        {haiList.map((x) => (
+          <li>
+            {x.number}
+            {x.type}
+          </li>
+        ))}
+      </ul>
+      <button onClick={() => dispatch(add({ number: 1, type: "m" }))}>
+        1m追加
+      </button>
       <br />
       <Link to="/result">点数画面へ遷移</Link>
     </>
