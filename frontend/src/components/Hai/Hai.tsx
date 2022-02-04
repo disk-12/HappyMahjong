@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import { Img } from './HaiStyle'
 
 type HaiType = 'm'|'p'|'s'|'z'
 
@@ -34,9 +35,5 @@ export const Hai: React.FC<Props> = ({
 
   const haiSrc = isValidHaiNumber() ? haiLink : defaultHaiLink
 
-  return (
-    <div>
-      <img src={haiSrc} alt={`Hai-${type}-${number}`}/>
-    </div>
-  )
+  return <Img src={haiSrc} alt={`Hai-${type}-${number}`}/>
 };
