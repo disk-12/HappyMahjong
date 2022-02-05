@@ -6,7 +6,7 @@ import { haiListSelector, add } from "../../app/HaiListSlice";
 import "./Check.scss";
 interface Props {}
 
-export const Check: React.FC<Props> = ({}) => {
+export const Check: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
   const haiList = useAppSelector(haiListSelector);
   return (

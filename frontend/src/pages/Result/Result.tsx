@@ -7,7 +7,7 @@ import "./Result.scss";
 
 interface Props {}
 
-export const Result: React.FC<Props> = ({}) => {
+export const Result: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
   const haiList = useAppSelector(haiListSelector);
   return (

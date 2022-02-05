@@ -9,7 +9,7 @@ import { MdOutlineCameraAlt } from 'react-icons/md';
 import { color } from "assets/color";
 interface Props {}
 
-export const Top: React.FC<Props> = ({}) => {
+export const Top: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
 
   const haiList = useAppSelector(haiListSelector);
