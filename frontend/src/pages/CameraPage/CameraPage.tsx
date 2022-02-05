@@ -1,6 +1,15 @@
 import { FC, useRef } from "react";
-import {Wrapper, CameraWrapper} from './CameraPageStyle'
+import { MdOutlineCameraAlt, MdFlipCameraAndroid } from 'react-icons/md';
+import { color } from "assets/color";
 import { Camera, CameraHandles } from "./components/Camera";
+import {
+  Wrapper,
+  CameraWrapper,
+  ButtonWrapper,
+  CaptureButton,
+  SwitchButton
+} from './CameraPageStyle'
+
 
 export const CameraPage: FC = () => {
   const cameraRef = useRef<CameraHandles>(null);
@@ -26,12 +35,14 @@ export const CameraPage: FC = () => {
           </li>
         ))}
       </ul> */}
-      <button onClick={() => takeCapture()}>
-        写真
-      </button>
-      <button onClick={() => switchCamera()}>
-        変更
-      </button>
+      <ButtonWrapper>
+        <SwitchButton onClick={() => switchCamera()}>
+          <MdFlipCameraAndroid size={24} color={color.MainGreen} title="Flip camera"/>
+        </SwitchButton>
+        <CaptureButton onClick={() => takeCapture()}>
+          <MdOutlineCameraAlt size={32} color={color.MainGreen} title="Take picture"/>
+        </CaptureButton>
+      </ButtonWrapper>
     </Wrapper>
   );
 };
