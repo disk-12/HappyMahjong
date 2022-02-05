@@ -18,11 +18,10 @@
         box-sizing: border-box;
         border-radius: 8px;
 
-        &:after{
-            content:"▼";
-            right:12px;
-            line-height:44px;
-        }
+        
+    }
+    &__triangle{
+        
     }
     &__label{
         display:flex;
