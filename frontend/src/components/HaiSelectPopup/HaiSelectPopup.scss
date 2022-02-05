@@ -3,6 +3,7 @@
         display:inline-block;
         min-width: 512px;
         height:112px;
+        position:relative;
     }
     &__panel{
         display:flex;
@@ -13,5 +14,11 @@
         align-items:center;
         justify-content: space-between;
         padding:0 32px;
+    }
+    &__close{
+        padding:8px;
+        position:absolute;
+        top:0;
+        right:0;
     }
 }

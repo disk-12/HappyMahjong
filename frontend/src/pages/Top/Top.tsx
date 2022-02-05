@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { Hai } from "components/Hai";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { color } from "assets/color";
-import { HaiSelectPopup } from "components/HaiSelectPopup/HaiSelectPopup";
 interface Props {}
 
 export const Top: React.FC<Props> = () => {
@@ -40,7 +39,6 @@ export const Top: React.FC<Props> = () => {
         color={color.MainGreen}
         title="Take picture!"
       />
-      <HaiSelectPopup initHai={{ type: "m", number: 1 }} />
     </>
   );
 };

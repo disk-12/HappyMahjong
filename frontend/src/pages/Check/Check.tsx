@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector, add } from "../../app/HaiListSlice";
 import "./Check.scss";
+import { HaiSelectPopup } from "components/HaiSelectPopup";
 interface Props {}
 
 export const Check: React.FC<Props> = () => {
@@ -27,6 +28,10 @@ export const Check: React.FC<Props> = () => {
       </button>
       <br />
       <Link to="/result">点数画面へ遷移</Link>
+      <HaiSelectPopup
+        initHai={{ type: "m", number: 1 }}
+        onClose={() => console.log("close")}
+      />
     </>
   );
 };
