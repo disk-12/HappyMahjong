@@ -128,6 +128,7 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
         <div className="HaiSelector__panel" onClick={() => setIsShown(true)}>
           <HaiItem icon={icon} text={text} />
         </div>
+        <div className="HaiSelector__triangle"></div>
       </div>
     </ClickAwayListener>
   );
