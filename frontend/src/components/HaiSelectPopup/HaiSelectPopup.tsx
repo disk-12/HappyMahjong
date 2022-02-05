@@ -7,7 +7,12 @@ type HaiProps = {
   type: HaiType;
   number: number;
 };
-type Props = { initHai: HaiProps; disable?: boolean; onClose?: Function };
+type Props = {
+  initHai: HaiProps;
+  disable?: boolean;
+  onClose?: Function;
+  onChange: Function;
+};
 type HaiType = "m" | "p" | "s" | "z";
 
 const typeList = ["m", "p", "s", "z"] as HaiType[];
@@ -17,6 +22,7 @@ export const HaiSelectPopup: React.FC<Props> = ({
   initHai,
   disable = false,
   onClose,
+  onChange,
 }) => {
   return (
     <>
@@ -29,7 +35,7 @@ export const HaiSelectPopup: React.FC<Props> = ({
           )}
           <div className="Popup__panel">
             <div className="Popup__text">牌の種類を選択</div>
-            <HaiSelectorPair initHai={initHai} />
+            <HaiSelectorPair initHai={initHai} onChange={onChange} />
           </div>
         </div>
       )}

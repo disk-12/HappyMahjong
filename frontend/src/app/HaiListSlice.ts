@@ -26,7 +26,7 @@ const haiListSlice = createSlice({
     },
     change: (state, action:PayloadAction<changeType>) => {
       state[action.payload.index] = action.payload.hai;
-      return [...state];
+      
     },
     swap: (state, action:PayloadAction<swapType>) => {
       const temp = state[action.payload.index1];
