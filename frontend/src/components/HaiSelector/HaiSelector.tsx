@@ -103,12 +103,11 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
     setText(isType ? typeKanji[index] : index + 1 + "" + type);
     onChange && onChange(index);
   };
-
   useEffect(() => {
-    if (type == "z" && selected >= 7) {
-      setSelected(0);
-      onChange && onChange(0);
-    }
+    setSelected(initSelected);
+    setText(isType ? typeKanji[initSelected] : initSelected + 1 + "" + type);
+  }, [type, initSelected]);
+  useEffect(() => {
     setIcon(
       (isType
         ? { type: typeList[selected], number: 1 }
