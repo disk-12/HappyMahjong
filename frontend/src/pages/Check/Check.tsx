@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { useAppDispatch, useAppSelector } from "../../app/store";
-import { haiListSelector, add } from "../../app/HaiListSlice";
+import { haiListSelector, add, reset, addAll } from "../../app/HaiListSlice";
 import "./Check.scss";
 import { HaiSelectPopup } from "components/HaiSelectPopup";
 interface Props {}
@@ -10,6 +10,27 @@ interface Props {}
 export const Check: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
   const haiList = useAppSelector(haiListSelector);
+
+  useEffect(() => {
+    dispatch(reset());
+    dispatch(
+      addAll([
+        { number: 1, type: "m" },
+        { number: 2, type: "m" },
+        { number: 3, type: "m" },
+        { number: 4, type: "m" },
+        { number: 6, type: "m" },
+        { number: 7, type: "m" },
+        { number: 8, type: "m" },
+        { number: 9, type: "m" },
+        { number: 2, type: "p" },
+        { number: 3, type: "p" },
+        { number: 4, type: "p" },
+        { number: 5, type: "m" },
+      ])
+    );
+  }, []);
+
   return (
     <>
       <h1>確認画面</h1>
