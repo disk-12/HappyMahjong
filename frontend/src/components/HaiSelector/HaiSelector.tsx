@@ -1,8 +1,10 @@
 import classNames from "classnames";
 import { Hai } from "components/Hai";
 import React, { useEffect, useState } from "react";
+import { MdArrowDropDown } from "react-icons/md";
 import ClickAwayListener from "react-click-away-listener";
 import "./HaiSelector.scss";
+import { color } from "assets/color";
 
 type ItemProps = {
   icon: HaiProps;
@@ -127,8 +129,14 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
         )}
         <div className="HaiSelector__panel" onClick={() => setIsShown(true)}>
           <HaiItem icon={icon} text={text} />
+          <div className="HaiSelector__triangle">
+            <MdArrowDropDown
+              size={24}
+              color={color.MainGreen}
+              title="Close Popup!"
+            />
+          </div>
         </div>
-        <div className="HaiSelector__triangle"></div>
       </div>
     </ClickAwayListener>
   );
