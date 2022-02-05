@@ -2,9 +2,7 @@ import { FC, useRef } from "react";
 import {Wrapper, CameraWrapper} from './CameraPageStyle'
 import { Camera, CameraHandles } from "./components/Camera";
 
-interface Props {}
-
-export const CameraPage: FC<Props> = () => {
+export const CameraPage: FC = () => {
   const cameraRef = useRef<CameraHandles>(null);
 
   const takeCapture = () => {
@@ -18,7 +16,7 @@ export const CameraPage: FC<Props> = () => {
   return (
     <Wrapper>
       <CameraWrapper>
-        <Camera id={'222'} ref={cameraRef}></Camera>
+        <Camera ref={cameraRef} />
       </CameraWrapper>
       {/* <ul>
         {haiList.map((x) => (

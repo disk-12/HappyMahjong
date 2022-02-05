@@ -7,10 +7,6 @@ export interface CameraHandles {
   switchCamera: () => void
 }
 
-interface Props {
-  id: string;
-}
-
 const errorMessages = {
   noCameraAccessible: 'カメラデバイスにアクセスできません。カメラを接続するか、別のブラウザでお試しください。',
   permissionDenied: 'アクセス許可が拒否されました。更新してカメラのアクセスを許可してください。',
@@ -19,7 +15,7 @@ const errorMessages = {
   canvas: 'Canvasが対応していません。'
 }
 
-const Component: ForwardRefRenderFunction<CameraHandles, Props> = (_props, ref) => {
+const Component: ForwardRefRenderFunction<CameraHandles> = (_, ref) => {
   const cameraRef = useRef<CameraType>(null)
   const wrapperRef = useRef<HTMLDivElement | null>(null)
   const [url, setUrl] = useState<string | undefined>(undefined)
