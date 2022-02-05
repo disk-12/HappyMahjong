@@ -4,9 +4,9 @@ import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector, add } from "../../app/HaiListSlice";
 import { Link } from "react-router-dom";
 import { Hai } from "components/Hai";
-import { HaiSelector } from "components/HaiSelector/HaiSelector";
-import { MdOutlineCameraAlt } from 'react-icons/md';
+import { MdOutlineCameraAlt } from "react-icons/md";
 import { color } from "assets/color";
+import { HaiSelectPopup } from "components/HaiSelectPopup/HaiSelectPopup";
 interface Props {}
 
 export const Top: React.FC<Props> = () => {
@@ -35,9 +35,12 @@ export const Top: React.FC<Props> = () => {
       <br />
       <Link to="/check">確認画面へ遷移</Link>
       <Hai type="s" number={1}></Hai>
-      <HaiSelector isType initSelected={0} />
-      <HaiSelector type="m" initSelected={0} />
-      <MdOutlineCameraAlt size={32} color={color.MainGreen} title="Take picture!"/>
+      <MdOutlineCameraAlt
+        size={32}
+        color={color.MainGreen}
+        title="Take picture!"
+      />
+      <HaiSelectPopup initHai={{ type: "m", number: 1 }} />
     </>
   );
 };

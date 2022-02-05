@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { Hai } from "components/Hai";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ClickAwayListener from "react-click-away-listener";
 import "./HaiSelector.scss";
 
@@ -53,7 +53,8 @@ const HaiSelectorWindow: React.FC<WindowProps> = ({
       itemList.push({ text, icon: { number: 1, type: typeList[index] } });
     });
   } else {
-    for (var i = 1; i <= 9; i++)
+    const maxLoop = type == "z" ? 7 : 9;
+    for (var i = 1; i <= maxLoop; i++)
       itemList.push({ text: i + type, icon: { number: i, type: type } });
   }
   return (
@@ -100,6 +101,19 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
     setText(isType ? typeKanji[index] : index + 1 + "" + type);
     onChange && onChange(index);
   };
+
+  useEffect(() => {
+    if (type == "z" && selected >= 7) {
+      setSelected(0);
+      onChange && onChange(0);
+    }
+    setIcon(
+      (isType
+        ? { type: typeList[selected], number: 1 }
+        : { type, number: selected + 1 }) as HaiProps
+    );
+    setText(isType ? typeKanji[selected] : selected + 1 + "" + type);
+  }, [type, selected]);
   return (
     <ClickAwayListener onClickAway={() => setIsShown(false)}>
       <div className="HaiSelector__box">

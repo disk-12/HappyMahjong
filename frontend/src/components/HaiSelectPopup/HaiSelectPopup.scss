@@ -1,0 +1,17 @@
+.Popup{
+    &__box{
+        display:inline-block;
+        min-width: 512px;
+        height:112px;
+    }
+    &__panel{
+        display:flex;
+        width:auto;
+        height:112px;
+        background: #F0F4F2;
+        border-radius: 16px;
+        align-items:center;
+        justify-content: space-between;
+        padding:0 32px;
+    }
+}
