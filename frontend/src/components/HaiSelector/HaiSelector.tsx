@@ -33,6 +33,11 @@ type HaiSelectorProps = {
 const typeKanji = ["萬子", "筒子", "索子", "字牌"];
 const typeList = ["m", "p", "s", "z"] as HaiType[];
 
+const typeObj = { m: "萬", p: "筒", s: "索" };
+const jihai = ["東", "南", "西", "北", "白", "發", "中"];
+const kansuji = ["一", "二", "三", "四", "五", "六", "七", "八", "九"];
+const haiString = (type: "m" | "p" | "s" | "z", number: number) =>
+  type === "z" ? jihai[number - 1] : kansuji[number - 1] + typeObj[type];
 const HaiItem: React.FC<ItemProps> = ({ icon, text }) => {
   return (
     <div className="HaiSelector__label">
@@ -57,7 +62,10 @@ const HaiSelectorWindow: React.FC<WindowProps> = ({
   } else {
     const maxLoop = type == "z" ? 7 : 9;
     for (var i = 1; i <= maxLoop; i++)
-      itemList.push({ text: i + type, icon: { number: i, type: type } });
+      itemList.push({
+        text: haiString(type, i),
+        icon: { number: i, type: type },
+      });
   }
   return (
     <div className="HaiSelector__window">
@@ -84,7 +92,7 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
 }) => {
   const [selected, setSelected] = useState(initSelected);
   const [text, setText] = useState(
-    isType ? typeKanji[initSelected] : initSelected + 1 + "" + type
+    isType ? typeKanji[initSelected] : haiString(type, initSelected + 1)
   );
   const [icon, setIcon] = useState(
     (isType
@@ -100,12 +108,14 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
         ? { type: typeList[index], number: 1 }
         : { type, number: index + 1 }) as HaiProps
     );
-    setText(isType ? typeKanji[index] : index + 1 + "" + type);
+    setText(isType ? typeKanji[index] : haiString(type, index + 1));
     onChange && onChange(index);
   };
   useEffect(() => {
     setSelected(initSelected);
-    setText(isType ? typeKanji[initSelected] : initSelected + 1 + "" + type);
+    setText(
+      isType ? typeKanji[initSelected] : haiString(type, initSelected + 1)
+    );
   }, [type, initSelected]);
   useEffect(() => {
     setIcon(
@@ -113,7 +123,7 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
         ? { type: typeList[selected], number: 1 }
         : { type, number: selected + 1 }) as HaiProps
     );
-    setText(isType ? typeKanji[selected] : selected + 1 + "" + type);
+    setText(isType ? typeKanji[selected] : haiString(type, selected + 1));
   }, [type, selected]);
   return (
     <ClickAwayListener onClickAway={() => setIsShown(false)}>
