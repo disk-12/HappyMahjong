@@ -54,6 +54,8 @@ export const Check: React.FC<Props> = () => {
         { number: 2, type: "p" },
         { number: 3, type: "p" },
         { number: 4, type: "p" },
+        { number: 7, type: "z" },
+        { number: 7, type: "z" },
         { number: 5, type: "m" },
       ])
     );
