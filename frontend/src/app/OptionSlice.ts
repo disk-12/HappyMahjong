@@ -28,11 +28,9 @@ const optionSlice = createSlice({
   reducers: {
     addDora:(state, action:PayloadAction<haiType>) => {
       state.dora = [...state.dora,action.payload]
-      return {...state};
     },
     removeDora:(state, action:PayloadAction<number>) => {
-      state.dora = state.dora.splice(action.payload,1);
-      return {...state};
+      state.dora.splice(action.payload,1);
     },
     switchRiichi:(state) => {
       return {...state,riichi:!state.riichi};

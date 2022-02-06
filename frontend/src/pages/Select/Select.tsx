@@ -58,7 +58,7 @@ export const Select: React.FC<Props> = () => {
         ))}
       </HaiContainer>
       <LinkContainer>
-        <Link to="/result">点数画面へ遷移{option.lastIndex}</Link>
+        <Link to="/option">オプションへ遷移{option.lastIndex}</Link>
       </LinkContainer>
       <HelpMessage page="select" />
     </CheckPage>
