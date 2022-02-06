@@ -3,7 +3,7 @@ import { Container, Text } from "./HelpMessageStyle";
 import { MdTouchApp } from "react-icons/md";
 import { color } from "assets/color";
 type Props = {
-  page: "check" | "select";
+  page: "check" | "select" | "option";
 };
 
 export const HelpMessage: React.FC<Props> = ({ page }) => {
@@ -20,6 +20,14 @@ export const HelpMessage: React.FC<Props> = ({ page }) => {
         <Container>
           <MdTouchApp size={32} color={color.White} />
           <Text>タップして和了牌（アガリ牌）を教えてください。</Text>
+        </Container>
+      );
+
+    case "option":
+      return (
+        <Container>
+          <MdTouchApp size={32} color={color.White} />
+          <Text>【オプション】和了の状態を選択してください。</Text>
         </Container>
       );
     default:

@@ -5,7 +5,7 @@ type HaiProps = {
   type: HaiType;
   number: number;
 };
-type Props = { initHai: HaiProps; onChange: Function };
+type Props = { initHai: HaiProps; onChange: Function; windowHeight?: number };
 type HaiType = "m" | "p" | "s" | "z";
 
 const typeList = ["m", "p", "s", "z"] as HaiType[];
