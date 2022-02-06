@@ -2327,6 +2327,11 @@ adjust-sourcemap-loader@^4.0.0:
     loader-utils "^2.0.0"
     regex-parser "^2.2.11"
 
+agari@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/agari/-/agari-1.1.0.tgz#fa6b166229c4d0c6ff2a0c1809ece30e96b48c3c"
+  integrity sha512-v40di6lkeAP0dgIqnnqZZ+ZdzZ4zPt8f+/dOIB4uswGgouqoIkyx7+3c2N0LFmQ1mUT9xVl4fHJbBe6+MC9l0A==
+
 agent-base@6:
   version "6.0.2"
   resolved "https://registry.npmjs.org/agent-base/-/agent-base-6.0.2.tgz"
@@ -7753,6 +7758,14 @@ reusify@^1.0.4:
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
+riichi@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/riichi/-/riichi-1.2.0.tgz#15301a8e51eb7d207eb03a94114e9247abab154e"
+  integrity sha512-sNL+RjL19Y1tJfsEqS1UETTcSMuCYLuKkv2XtQqqY7bj8TF3Qd847qeHFubsmFoEIwskTPCJEVdJVttqvmdImQ==
+  dependencies:
+    agari "^1.1.0"
+    syanten "^1.5.0"
+
 rimraf@^3.0.0, rimraf@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz"
@@ -8393,6 +8406,11 @@ svgo@^2.7.0:
     csso "^4.2.0"
     picocolors "^1.0.0"
     stable "^0.1.8"
+
+syanten@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/syanten/-/syanten-1.5.0.tgz#73ca4c6c2763e46a453030ae85f9b845ae78d0ef"
+  integrity sha512-CWGmFNq7igTERvraMsqjJjMzh6LQB/IyAbZ/WjtNmolVTF173gFcYi4DjgeNBf37SZsJDBacKeNtUJ8VtXqiAA==
 
 symbol-tree@^3.2.4:
   version "3.2.4"
