@@ -89,7 +89,7 @@ export const Check: React.FC<Props> = () => {
         </PopupContainer>
       </PopupSpace>
       <LinkContainer>
-        <Link to="/result">点数画面へ遷移</Link>
+        <Link to="/select">和了牌選択へ遷移</Link>
       </LinkContainer>
       <HelpMessage page="check" />
     </CheckPage>
