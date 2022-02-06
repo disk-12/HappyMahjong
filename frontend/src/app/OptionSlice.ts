@@ -9,7 +9,8 @@ export interface OptionState{
   rinshan:boolean,
   houtei:boolean,
   haitei:boolean,
-  dora:haiType[]
+  dora:haiType[],
+  lastIndex:number
 }
 
 const optionSlice = createSlice({
@@ -21,7 +22,8 @@ const optionSlice = createSlice({
     rinshan:false,
     houtei:false,
     haitei:false,
-    dora:[]
+    dora:[],
+    lastIndex:-1
   } as OptionState,
   reducers: {
     addDora:(state, action:PayloadAction<haiType>) => {
@@ -50,10 +52,13 @@ const optionSlice = createSlice({
     switchHaitei:(state) => {
       return {...state,haitei:!state.haitei};
     },
+    setLastIndex:(state,action:PayloadAction<number>) => {
+      return {...state,lastIndex:action.payload};
+    },
   }
 });
 
-export const { addDora,removeDora,switchRiichi,switchIppatsu,switchChankan,switchRinshan,switchHoutei,switchHaitei} = optionSlice.actions;
+export const { addDora,removeDora,switchRiichi,switchIppatsu,switchChankan,switchRinshan,switchHoutei,switchHaitei,setLastIndex} = optionSlice.actions;
 
 export const optionSelector = (state: RootState) => state.opiton;
 

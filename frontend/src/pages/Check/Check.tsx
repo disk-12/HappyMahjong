@@ -54,6 +54,8 @@ export const Check: React.FC<Props> = () => {
         { number: 2, type: "p" },
         { number: 3, type: "p" },
         { number: 4, type: "p" },
+        { number: 7, type: "z" },
+        { number: 7, type: "z" },
         { number: 5, type: "m" },
       ])
     );
@@ -89,7 +91,7 @@ export const Check: React.FC<Props> = () => {
         </PopupContainer>
       </PopupSpace>
       <LinkContainer>
-        <Link to="/result">点数画面へ遷移</Link>
+        <Link to="/select">和了牌選択へ遷移</Link>
       </LinkContainer>
       <HelpMessage page="check" />
     </CheckPage>
