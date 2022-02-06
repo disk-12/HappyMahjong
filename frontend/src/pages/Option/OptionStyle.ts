@@ -36,6 +36,9 @@ export const DoraSelector = styled.div`
 export const DoraText = styled.div`
   margin-right:32px;
 `
+export const AddDora = styled.div`
+  margin-left:24px;
+`
 export const DoraList = styled.div`
  display:flex;
  flex-wrap: wrap;

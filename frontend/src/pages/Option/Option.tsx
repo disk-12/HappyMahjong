@@ -12,6 +12,7 @@ import {
   removeDora,
 } from "app/OptionSlice";
 import {
+  AddDora,
   CheckPanel,
   DoraList,
   DoraPanel,
@@ -81,14 +82,14 @@ export const Option: React.FC<Props> = () => {
               initHai={dora}
               onChange={(newDora: HaiProps) => setDora(newDora)}
             />
-            <div
+            <AddDora
               onClick={() => {
                 console.log(option.dora);
                 dispatch(addDora(dora));
               }}
             >
               ドラ追加
-            </div>
+            </AddDora>
           </DoraSelector>
           <DoraList>
             {option.dora.map((hai, i) => (
