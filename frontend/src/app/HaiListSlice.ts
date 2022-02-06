@@ -13,7 +13,7 @@ export interface haiType{
   number:number,
   type:"m"|"p"|"s"|"z"
 }
-
+export type haiListState = haiType[];
 const haiListSlice = createSlice({
   name: "haiList",
   initialState: [] as haiType[],
