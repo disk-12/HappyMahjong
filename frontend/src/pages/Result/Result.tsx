@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { useAppDispatch, useAppSelector } from "../../app/store";
+import { useAppSelector } from "../../app/store";
 import { haiListSelector, haiListState } from "../../app/HaiListSlice";
 import "./Result.scss";
 import { optionSelector, OptionState } from "app/OptionSlice";
@@ -25,10 +25,10 @@ const convert = (haiList: haiListState, option: OptionState) => {
 };
 
 export const Result: React.FC<Props> = () => {
-  const dispatch = useAppDispatch();
   const haiList = useAppSelector(haiListSelector);
   const option = useAppSelector(optionSelector);
   const [result, setResult] = useState<ResultState | null>(null);
+
   useEffect(() => {
     const riichi = new Riichi(convert(haiList, option));
     setResult(riichi.calc());
