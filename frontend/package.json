@@ -34,7 +34,7 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "format": "prettier --check src/**/*.{jsx,js,tsx,ts,css,scss,md,json}",
-    "lint": "eslint src/**/*.{jsx,js,tsx,ts}",
+    "lint": "eslint --ext js,jsx,ts,tsx src/",
     "lint:fix": "eslint --fix src/**/*.{jsx,js,tsx,ts} && prettier --write .",
     "format:fix": "prettier --write src/**/*.{jsx,js,tsx,ts,css,scss,md,json}"
   },
