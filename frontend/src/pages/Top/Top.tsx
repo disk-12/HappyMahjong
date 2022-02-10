@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Hai } from "components/Hai";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { color } from "assets/color";
+import Button from "components/Button/Button";
 interface Props {}
 
 export const Top: React.FC<Props> = () => {
@@ -32,6 +33,15 @@ export const Top: React.FC<Props> = () => {
         1m追加
       </button>
       <br />
+      <Button 
+        border="none"
+        color="pink"
+        height = "200px"
+        onClick={() => <Link to="/check">確認画面へ遷移</Link>}
+        radius = "50%"
+        width = "200px"
+        children = "I'm a pink circle!"
+      />
       <Link to="/check">確認画面へ遷移</Link>
       <Hai type="s" number={1}></Hai>
       <MdOutlineCameraAlt
