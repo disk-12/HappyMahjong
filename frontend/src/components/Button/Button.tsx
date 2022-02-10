@@ -7,7 +7,7 @@ interface Props {
   text: string;
 }
 
-const Button: React.FC<Props> = ({
+export const Button: React.FC<Props> = ({
   onClick,
   text
 }) => {

@@ -3,6 +3,8 @@ import "./Top.scss";
 import { Link } from "react-router-dom";
 import { color } from "assets/color";
 import styled from "styled-components";
+import { Button } from "components/Button";
+
 interface Props {}
 
 export const Top: React.FC<Props> = () => {
@@ -33,6 +35,7 @@ export const Top: React.FC<Props> = () => {
       <Title>麻雀計算</Title>
       <LinkBox>
         <Link to="/camera">開始する</Link>
+        <Button onClick={()=>{}} text="開始する"/>
       </LinkBox>
     </>
   );
