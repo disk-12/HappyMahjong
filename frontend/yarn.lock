@@ -4139,6 +4139,11 @@ eslint-plugin-jsx-a11y@^6.5.1:
     language-tags "^1.0.5"
     minimatch "^3.0.4"
 
+eslint-plugin-react-hooks@^4.2.1-rc.0-next-a3bde7974-20220208:
+  version "4.2.1-rc.0-next-a3bde7974-20220208"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.2.1-rc.0-next-a3bde7974-20220208.tgz#4b70470c924b999cf95c50770479f9bc771e7b9a"
+  integrity sha512-k5ZT3ZFOa36JsupI9YZmpZt6OFiS+O433St+4/UNL2ojYlNEUDMifji0tI5yl3x8T9XhEjkYokZjat24GiedqA==
+
 eslint-plugin-react-hooks@^4.3.0:
   version "4.3.0"
   resolved "https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.3.0.tgz"
