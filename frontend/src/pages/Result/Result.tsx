@@ -6,6 +6,10 @@ import { haiListSelector, haiListState } from "../../app/HaiListSlice";
 import "./Result.scss";
 import { optionSelector, OptionState } from "app/OptionSlice";
 import Riichi from "riichi";
+import { Button } from "components/Button";
+import { ButtonText } from "components/Button/ButtonStyle";
+import { MdOutlineCameraAlt } from "react-icons/md";
+
 interface Props {}
 interface ResultState {
   isAgari: boolean;
@@ -37,7 +41,11 @@ export const Result: React.FC<Props> = () => {
   return (
     <>
       {JSON.stringify(result)}
-      <Link to="/">撮影画面へ遷移</Link>
+      <Link to="/"></Link>
+      <Button to="/">
+        <MdOutlineCameraAlt size={24}/>
+        <ButtonText>新しく牌を撮る</ButtonText>
+      </Button>
     </>
   );
 };

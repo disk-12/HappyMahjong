@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-
 import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector, reset, addAll, change } from "../../app/HaiListSlice";
 import { HaiSelectPopup } from "components/HaiSelectPopup";
 import { Hai } from "components/Hai";
+import { Button } from "components/Button";
+import { ButtonText } from "components/Button/ButtonStyle";
+import { MdNavigateNext } from "react-icons/md";
 import {
   CheckPage,
   HaiBox,
@@ -91,7 +92,10 @@ export const Check: React.FC<Props> = () => {
         </PopupContainer>
       </PopupSpace>
       <LinkContainer>
-        <Link to="/select">和了牌選択へ遷移</Link>
+        <Button to="/select">
+          <ButtonText>和了牌選択へ</ButtonText>
+          <MdNavigateNext size={24}/>
+        </Button>
       </LinkContainer>
       <HelpMessage page="check" />
     </CheckPage>
