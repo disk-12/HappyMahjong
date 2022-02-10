@@ -35,7 +35,7 @@ export const Top: React.FC<Props> = () => {
       <Title>麻雀計算</Title>
       <LinkBox>
         <Link to="/camera">開始する</Link>
-        <Button onClick={()=>{}} text="開始する"/>
+        <Button to="/camera">開始する</Button>
       </LinkBox>
     </>
   );

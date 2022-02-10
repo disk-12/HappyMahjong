@@ -1,22 +1,25 @@
 import React from "react";
-import { ButtonWrapper } from './ButtonStyle'
-
+import { Link } from "react-router-dom";
+import { ButtonWrapper, LinkWrapper } from './ButtonStyle'
 
 interface Props {
-  onClick: () => void;
-  text: string;
+  to?: string;
+  onClick?: () => void;
 }
 
-export const Button: React.FC<Props> = ({
-  onClick,
-  text
-}) => {
+export const Button: React.FC<Props> = props => {
+  const isLink = !!props.to
   return (
-    <ButtonWrapper
-      onClick={onClick}
-    >
-      { text }
-    </ButtonWrapper>
+    <>
+      { isLink ? (
+          <Link to={props.to ? props.to : ''}>
+            <LinkWrapper {...props}/>
+          </Link>
+        ) : (
+          <ButtonWrapper {...props}/>
+        )
+      }
+    </>
   );
 };
 
