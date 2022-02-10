@@ -26,7 +26,7 @@ export const HaiSelectorPair: React.FC<Props> = ({ initHai, onChange }) => {
           isType
           initSelected={Type2Index[type]}
           onChange={(index: number) => {
-            if (index == 3 && number >= 7)
+            if (index === 3 && number >= 7)
               onChange({ type: typeList[index], number: 1 });
             else onChange({ type: typeList[index], number });
           }}

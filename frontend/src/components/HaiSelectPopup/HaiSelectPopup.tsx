@@ -15,9 +15,6 @@ type Props = {
 };
 type HaiType = "m" | "p" | "s" | "z";
 
-const typeList = ["m", "p", "s", "z"] as HaiType[];
-const Type2Index = { m: 0, p: 1, s: 2, z: 3 };
-
 export const HaiSelectPopup: React.FC<Props> = ({
   initHai,
   disable = false,

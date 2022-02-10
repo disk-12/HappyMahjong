@@ -60,7 +60,7 @@ const HaiSelectorWindow: React.FC<WindowProps> = ({
       itemList.push({ text, icon: { number: 1, type: typeList[index] } });
     });
   } else {
-    const maxLoop = type == "z" ? 7 : 9;
+    const maxLoop = type === "z" ? 7 : 9;
     for (var i = 1; i <= maxLoop; i++)
       itemList.push({
         text: haiString(type, i),
@@ -116,7 +116,7 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
     setText(
       isType ? typeKanji[initSelected] : haiString(type, initSelected + 1)
     );
-  }, [type, initSelected]);
+  }, [type, initSelected, isType]);
   useEffect(() => {
     setIcon(
       (isType
@@ -124,7 +124,7 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
         : { type, number: selected + 1 }) as HaiProps
     );
     setText(isType ? typeKanji[selected] : haiString(type, selected + 1));
-  }, [type, selected]);
+  }, [type, selected, isType]);
   return (
     <ClickAwayListener onClickAway={() => setIsShown(false)}>
       <div className="HaiSelector__box">
