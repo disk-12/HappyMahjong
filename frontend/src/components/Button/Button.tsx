@@ -4,15 +4,18 @@ import { ButtonWrapper } from './ButtonStyle'
 
 interface Props {
   onClick: () => void;
+  text: string;
 }
 
 const Button: React.FC<Props> = ({
   onClick,
+  text
 }) => {
   return (
     <ButtonWrapper
       onClick={onClick}
     >
+      { text }
     </ButtonWrapper>
   );
 };
