@@ -1,14 +1,18 @@
+// libraries
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
-import { useAppSelector } from "../../app/store";
-import { haiListSelector, haiListState } from "../../app/HaiListSlice";
-import "./Result.scss";
-import { optionSelector, OptionState } from "app/OptionSlice";
 import Riichi from "riichi";
+import { MdOutlineCameraAlt } from "react-icons/md";
+// components
 import { Button } from "components/Button";
 import { ButtonText } from "components/Button/ButtonStyle";
-import { MdOutlineCameraAlt } from "react-icons/md";
+import { Hai } from "components/Hai";
+// state
+import { useAppSelector } from "app/store";
+import { haiListSelector, haiListState } from "app/HaiListSlice";
+import { optionSelector, OptionState } from "app/OptionSlice";
+// style
+import { HaiBox, HaiContainer } from "./ResultStyle";
 
 interface Props {}
 interface ResultState {
@@ -41,6 +45,13 @@ export const Result: React.FC<Props> = () => {
   return (
     <>
       {JSON.stringify(result)}
+      <HaiContainer>
+        {haiList.map((hai, i) => (
+          <HaiBox key={i}>
+            <Hai {...hai} />
+          </HaiBox>
+        ))}
+      </HaiContainer>
       <Link to="/"></Link>
       <Button to="/">
         <MdOutlineCameraAlt size={24}/>
