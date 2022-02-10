@@ -2,7 +2,7 @@ import { color } from "assets/color";
 import styled, { css } from "styled-components";
 
 const wrapperStyle = css`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 8px 12px;
   color: ${color.MainGreen};
