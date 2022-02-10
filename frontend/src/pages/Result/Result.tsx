@@ -32,7 +32,8 @@ export const Result: React.FC<Props> = () => {
   useEffect(() => {
     const riichi = new Riichi(convert(haiList, option));
     setResult(riichi.calc());
-  }, []);
+  }, [haiList, option]);
+  
   return (
     <>
       {JSON.stringify(result)}
