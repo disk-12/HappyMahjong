@@ -34,3 +34,7 @@ export const ButtonWrapper = styled.button`
 export const LinkWrapper = styled.div`
   ${wrapperStyle}
 `
+
+export const ButtonText = styled.span`
+  padding: 0 4px;
+`
