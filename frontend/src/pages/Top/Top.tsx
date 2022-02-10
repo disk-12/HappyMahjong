@@ -7,48 +7,38 @@ import { Hai } from "components/Hai";
 import { MdOutlineCameraAlt } from "react-icons/md";
 import { color } from "assets/color";
 import Button from "components/Button/Button";
+import styled from "styled-components";
 interface Props {}
 
 export const Top: React.FC<Props> = () => {
-  const dispatch = useAppDispatch();
+  const Title = styled.div`
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
-  const haiList = useAppSelector(haiListSelector);
+    font-family: Noto Sans JP;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 90px;
 
-  console.log(haiList);
+    text-align: center;
+
+    color: ${color.White};
+  `;
+  const LinkBox = styled.div`
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 78px;
+  `;
   return (
     <>
-      <h1>撮影画面</h1>
-      <p>ここは撮影画面です．</p>
-      haiList:
-      <ul>
-        {haiList.map((x) => (
-          <li>
-            {x.number}
-            {x.type}
-          </li>
-        ))}
-      </ul>
-      <br />
-      <button onClick={() => dispatch(add({ number: 1, type: "m" }))}>
-        1m追加
-      </button>
-      <br />
-      <Button 
-        border="none"
-        color="pink"
-        height = "200px"
-        onClick={() => <Link to="/check">確認画面へ遷移</Link>}
-        radius = "50%"
-        width = "200px"
-        children = "I'm a pink circle!"
-      />
-      <Link to="/check">確認画面へ遷移</Link>
-      <Hai type="s" number={1}></Hai>
-      <MdOutlineCameraAlt
-        size={32}
-        color={color.MainGreen}
-        title="Take picture!"
-      />
+      <Title>麻雀計算</Title>
+      <LinkBox>
+        <Link to="/camera">開始する</Link>
+      </LinkBox>
     </>
   );
 };
