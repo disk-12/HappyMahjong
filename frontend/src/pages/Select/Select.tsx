@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
 import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector } from "../../app/HaiListSlice";
 import { setLastIndex } from "../../app/OptionSlice";
 import { Hai } from "components/Hai";
+import { Button } from "components/Button";
+import { ButtonText } from "components/Button/ButtonStyle";
+import { MdNavigateNext } from "react-icons/md";
 import {
   CheckPage,
   HaiBox,
@@ -24,6 +25,7 @@ export const Select: React.FC<Props> = () => {
   const haiList = useAppSelector(haiListSelector);
   const option = useAppSelector(optionSelector);
   const [selected, setSelected] = useState(-1);
+  console.log(option.lastIndex)
 
   return (
     <CheckPage>
@@ -52,7 +54,10 @@ export const Select: React.FC<Props> = () => {
         ))}
       </HaiContainer>
       <LinkContainer>
-        <Link to="/option">オプションへ遷移{option.lastIndex}</Link>
+        <Button to="/option">
+          <ButtonText>オプションへ</ButtonText>
+          <MdNavigateNext size={24}/>
+        </Button>
       </LinkContainer>
       <HelpMessage page="select" />
     </CheckPage>

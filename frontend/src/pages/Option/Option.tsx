@@ -23,10 +23,13 @@ import {
   Panel,
 } from "./OptionStyle";
 import { HelpMessage } from "components/HelpMessage";
-import { Link } from "react-router-dom";
 import { CheckBox } from "./components/CheckBox";
 import { HaiSelectorPair } from "components/HaiSelectorPair";
 import { DoraItem } from "./components/DoraItem";
+import { Button } from "components/Button";
+import { ButtonText } from "components/Button/ButtonStyle";
+import { MdNavigateNext } from "react-icons/md";
+
 interface Props {}
 interface HaiProps {
   type: "m" | "p" | "s" | "z";
@@ -105,7 +108,10 @@ export const Option: React.FC<Props> = () => {
         </DoraPanel>
       </Panel>
       <LinkContainer>
-        <Link to="/result">結果画面へ遷移</Link>
+        <Button to="/result">
+          <ButtonText>点数を見る</ButtonText>
+          <MdNavigateNext size={24}/>
+        </Button>
       </LinkContainer>
       <HelpMessage page="option" />
     </OptionPage>

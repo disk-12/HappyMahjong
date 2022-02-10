@@ -20,3 +20,10 @@ code {
 #root {
   height: 100%;
 }
+
+a,
+a:link,
+a:visited,
+a:-webkit-any-link {
+  text-decoration: none;
+}

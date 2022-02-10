@@ -1,8 +1,11 @@
 import React from "react";
 import "./Top.scss";
-import { Link } from "react-router-dom";
 import { color } from "assets/color";
 import styled from "styled-components";
+import { Button } from "components/Button";
+import { ButtonText } from "components/Button/ButtonStyle";
+import { MdNavigateNext } from "react-icons/md";
+
 interface Props {}
 
 export const Top: React.FC<Props> = () => {
@@ -32,7 +35,10 @@ export const Top: React.FC<Props> = () => {
     <>
       <Title>麻雀計算</Title>
       <LinkBox>
-        <Link to="/camera">開始する</Link>
+        <Button to="/camera">
+          <ButtonText>開始する</ButtonText>
+          <MdNavigateNext size={24}/>
+        </Button>
       </LinkBox>
     </>
   );

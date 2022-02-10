@@ -1,37 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { ButtonWrapper, LinkWrapper } from './ButtonStyle'
 
 interface Props {
-  border: string;
-  color: string;
-  children?: React.ReactNode;
-  height: string;
-  onClick: () => void;
-  radius: string;
-  width: string;
+  to?: string;
+  onClick?: () => void;
+  disabled?: boolean
 }
 
-const Button: React.FC<Props> = ({
-  border,
-  color,
-  children,
-  height,
-  onClick,
-  radius,
-  width,
-}) => {
+export const Button: React.FC<Props> = props => {
+  const isLink = !!props.to
+  const isDisabled = !!props.disabled
   return (
-    <button
-      onClick={onClick}
-      style={{
-        backgroundColor: color,
-        border,
-        borderRadius: radius,
-        height,
-        width,
-      }}
-    >
-      {children}
-    </button>
+    <>
+      { (isLink && !isDisabled) ? (
+          <Link to={props.to ? props.to : ''}>
+            <LinkWrapper {...props}/>
+          </Link>
+        ) : (
+          <ButtonWrapper {...props}/>
+        )
+      }
+    </>
   );
 };
 
