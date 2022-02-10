@@ -59,7 +59,7 @@ export const Check: React.FC<Props> = () => {
         { number: 5, type: "m" },
       ])
     );
-  }, []);
+  }, [dispatch]);
 
   return (
     <CheckPage>
@@ -71,7 +71,7 @@ export const Check: React.FC<Props> = () => {
               <Hai {...hai} />
             </div>
             <Triganle
-              style={{ visibility: selected == i ? "visible" : "hidden" }}
+              style={{ visibility: selected === i ? "visible" : "hidden" }}
             />
           </HaiBox>
         ))}
@@ -80,10 +80,10 @@ export const Check: React.FC<Props> = () => {
         <PopupContainer style={{ left: getLeft(selected) }}>
           <HaiSelectPopup
             initHai={
-              selected == -1 ? { type: "m", number: 1 } : haiList[selected]
+              selected === -1 ? { type: "m", number: 1 } : haiList[selected]
             }
             onClose={() => setSelected(-1)}
-            disable={selected == -1}
+            disable={selected === -1}
             onChange={(hai: HaiState) => {
               dispatch(change({ index: selected, hai }));
             }}

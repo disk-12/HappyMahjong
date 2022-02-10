@@ -1,64 +1,59 @@
-.HaiSelector{
-    &__box{
-        display:inline-block;
-        min-width:136px;
-        position: relative;
-    }
-    &__panel{
-        display:flex;
-        padding:8px 16px;
-        width: auto;
-        height: 48px;
+.HaiSelector {
+  &__box {
+    display: inline-block;
+    min-width: 136px;
+    position: relative;
+  }
+  &__panel {
+    display: flex;
+    padding: 8px 16px;
+    width: auto;
+    height: 48px;
 
-        align-items: center;
-        justify-content: space-between;
-        background-color:#F9FBF9;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9fbf9;
 
-        border: 2px solid #DAE4DE;
-        box-sizing: border-box;
-        border-radius: 8px;
+    border: 2px solid #dae4de;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  &__triangle {
+  }
+  &__label {
+    display: flex;
+    vertical-align: middle;
+  }
+  &__icon {
+    display: inline-block;
+    margin-right: 8px;
+    padding: auto;
+  }
+  &__text {
+    display: inline-block;
+  }
+  &__window {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #f9fbf9;
+    box-shadow: 0px 4px 16px -4px rgba(45, 49, 51, 0.6);
+    border-radius: 8px;
+    padding: 4px 0;
+    overflow: scroll;
+    max-height: 248px;
+  }
+  &__item {
+    display: flex;
+    height: 40px;
+    padding: 8px 16px;
+    vertical-align: middle;
 
-        
+    align-items: center;
+    justify-content: space-between;
+    &--selected {
+      background: #d9e6dc;
     }
-    &__triangle{
-        
-    }
-    &__label{
-        display:flex;
-        vertical-align: middle;
-    }
-    &__icon{
-        display:inline-block;
-        margin-right: 8px;
-        padding:auto;
-    }
-    &__text{
-        display:inline-block;
-
-    }
-    &__window{
-        position:absolute;
-        bottom:100%;
-        width:100%;
-        margin-bottom:10px;
-        background: #F9FBF9;
-        box-shadow: 0px 4px 16px -4px rgba(45, 49, 51, 0.6);
-        border-radius: 8px;
-        padding:4px 0;
-        overflow:scroll;
-        max-height: 248px;
-    }
-    &__item{
-        display:flex;
-        height:40px;
-        padding:8px 16px;
-        vertical-align: middle;
-
-        align-items: center;
-        justify-content: space-between;
-        &--selected{
-            background: #D9E6DC;
-
-        }
-    }
+  }
 }
