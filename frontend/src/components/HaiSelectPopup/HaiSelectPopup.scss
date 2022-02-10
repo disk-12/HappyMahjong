@@ -1,24 +1,24 @@
-.Popup{
-    &__box{
-        display:inline-block;
-        width: 512px;
-        height:112px;
-        position:relative;
-    }
-    &__panel{
-        display:flex;
-        width:auto;
-        height:112px;
-        background: #F0F4F2;
-        border-radius: 16px;
-        align-items:center;
-        justify-content: space-between;
-        padding:0 32px;
-    }
-    &__close{
-        padding:8px;
-        position:absolute;
-        top:0;
-        right:0;
-    }
+.Popup {
+  &__box {
+    display: inline-block;
+    width: 512px;
+    height: 112px;
+    position: relative;
+  }
+  &__panel {
+    display: flex;
+    width: auto;
+    height: 112px;
+    background: #f0f4f2;
+    border-radius: 16px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+  &__close {
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

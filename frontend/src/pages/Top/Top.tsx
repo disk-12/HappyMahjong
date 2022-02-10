@@ -1,12 +1,7 @@
 import React from "react";
 import "./Top.scss";
-import { useAppDispatch, useAppSelector } from "../../app/store";
-import { haiListSelector, add } from "../../app/HaiListSlice";
 import { Link } from "react-router-dom";
-import { Hai } from "components/Hai";
-import { MdOutlineCameraAlt } from "react-icons/md";
 import { color } from "assets/color";
-import Button from "components/Button/Button";
 import styled from "styled-components";
 interface Props {}
 

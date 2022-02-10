@@ -11,8 +11,6 @@ import {
   HaiContainer,
   Img,
   LinkContainer,
-  PopupContainer,
-  PopupSpace,
   TextPopup,
   Triganle,
 } from "./SelectStyle";
@@ -20,10 +18,6 @@ import { HelpMessage } from "components/HelpMessage";
 import { optionSelector } from "app/OptionSlice";
 
 interface Props {}
-interface HaiState {
-  type: "m" | "p" | "s" | "z";
-  number: number;
-}
 
 export const Select: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
@@ -48,7 +42,7 @@ export const Select: React.FC<Props> = () => {
             </div>
             <div
               style={{
-                visibility: selected == i ? "visible" : "hidden",
+                visibility: selected === i ? "visible" : "hidden",
               }}
             >
               <Triganle />

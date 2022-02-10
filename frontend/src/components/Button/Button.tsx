@@ -6,33 +6,33 @@ interface Props {
   children?: React.ReactNode;
   height: string;
   onClick: () => void;
-  radius: string
+  radius: string;
   width: string;
 }
 
-const Button: React.FC<Props> = ({ 
-    border,
-    color,
-    children,
-    height,
-    onClick, 
-    radius,
-    width
-  }) => { 
+const Button: React.FC<Props> = ({
+  border,
+  color,
+  children,
+  height,
+  onClick,
+  radius,
+  width,
+}) => {
   return (
-    <button 
+    <button
       onClick={onClick}
       style={{
-         backgroundColor: color,
-         border,
-         borderRadius: radius,
-         height,
-         width
+        backgroundColor: color,
+        border,
+        borderRadius: radius,
+        height,
+        width,
       }}
     >
-    {children}
+      {children}
     </button>
   );
-}
+};
 
 export default Button;

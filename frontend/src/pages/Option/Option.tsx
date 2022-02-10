@@ -26,7 +26,6 @@ import { HelpMessage } from "components/HelpMessage";
 import { Link } from "react-router-dom";
 import { CheckBox } from "./components/CheckBox";
 import { HaiSelectorPair } from "components/HaiSelectorPair";
-import { type } from "os";
 import { DoraItem } from "./components/DoraItem";
 interface Props {}
 interface HaiProps {

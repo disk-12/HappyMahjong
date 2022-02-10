@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   height: 100%;
   background: ${color.Black};
   color: ${color.White};
-`
+`;
 
 export const ScreenShot = styled.img`
   position: absolute;
@@ -18,4 +18,4 @@ export const ScreenShot = styled.img`
   height: 100%;
   object-fit: contain;
   object-position: center;
-`
+`;
