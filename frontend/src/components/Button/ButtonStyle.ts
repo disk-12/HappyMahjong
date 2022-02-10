@@ -15,6 +15,16 @@ const wrapperStyle = css`
   &:active {
     background-color: ${color.Selected};
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: ${color.DisabledMain};
+    background-color: ${color.DisabledBack};
+
+    &:active {
+      background-color: ${color.DisabledBack};
+    }
+  }
 `
 
 export const ButtonWrapper = styled.button`
