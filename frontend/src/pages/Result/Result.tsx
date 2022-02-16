@@ -12,7 +12,7 @@ import { useAppSelector } from "app/store";
 import { haiListSelector, haiListState } from "app/HaiListSlice";
 import { optionSelector, OptionState } from "app/OptionSlice";
 // style
-import { HaiBox, HaiContainer } from "./ResultStyle";
+import { HaiBox, HaiContainer, YakuContainer, YakuBox } from "./ResultStyle";
 
 interface Props {}
 interface ResultState {
@@ -42,6 +42,8 @@ export const Result: React.FC<Props> = () => {
     setResult(riichi.calc());
   }, [haiList, option]);
 
+  const yakuList = result ? Object.entries(result.yaku).map(([name, han]) => ({name, han})) : null
+
   return (
     <>
       {JSON.stringify(result)}
@@ -52,6 +54,16 @@ export const Result: React.FC<Props> = () => {
           </HaiBox>
         ))}
       </HaiContainer>
+      { yakuList && (
+        <YakuContainer>
+          {yakuList.map((yaku, i) => (
+            <YakuBox key={i}>
+              <span>{yaku.name}</span>
+              <span>{yaku.han}</span>
+            </YakuBox>
+          ))}
+        </YakuContainer>
+      )}
       <Link to="/"></Link>
       <Button to="/">
         <MdOutlineCameraAlt size={24}/>
