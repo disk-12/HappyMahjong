@@ -1,10 +1,17 @@
 import { FC, useRef } from "react";
-import { Wrapper, CameraWrapper } from "./CameraPageStyle";
+import { MdOutlineCameraAlt, MdFlipCameraAndroid } from 'react-icons/md';
+import { color } from "assets/color";
 import { Camera, CameraHandles } from "./components/Camera";
 import { useNavigate } from "react-router-dom";
-interface Props {}
+import {
+  Wrapper,
+  CameraWrapper,
+  ButtonWrapper,
+  CaptureButton,
+  SwitchButton
+} from './CameraPageStyle'
 
-export const CameraPage: FC<Props> = () => {
+export const CameraPage: FC = () => {
   const cameraRef = useRef<CameraHandles>(null);
   const navigate = useNavigate();
   const takeCapture = () => {
@@ -20,7 +27,7 @@ export const CameraPage: FC<Props> = () => {
   return (
     <Wrapper>
       <CameraWrapper>
-        <Camera id={"222"} ref={cameraRef}></Camera>
+        <Camera ref={cameraRef} />
       </CameraWrapper>
       {/* <ul>
         {haiList.map((x) => (
@@ -30,8 +37,14 @@ export const CameraPage: FC<Props> = () => {
           </li>
         ))}
       </ul> */}
-      <button onClick={() => takeCapture()}>写真</button>
-      <button onClick={() => switchCamera()}>変更</button>
+      <ButtonWrapper>
+        <SwitchButton onClick={() => switchCamera()}>
+          <MdFlipCameraAndroid size={24} color={color.MainGreen} title="Flip camera"/>
+        </SwitchButton>
+        <CaptureButton onClick={() => takeCapture()}>
+          <MdOutlineCameraAlt size={32} color={color.MainGreen} title="Take picture"/>
+        </CaptureButton>
+      </ButtonWrapper>
     </Wrapper>
   );
 };
