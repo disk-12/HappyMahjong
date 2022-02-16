@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   height: 100%;
   display: flex;
   background: ${color.MainGreen};
-`
+`;
 
 export const CameraWrapper = styled.div`
   width: 100%;

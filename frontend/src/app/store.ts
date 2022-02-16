@@ -5,11 +5,10 @@ import optionReducer from "./OptionSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 export const store = configureStore({
   reducer: {
-      haiList:haiListReducer,
-      opiton:optionReducer
-    }
+    haiList: haiListReducer,
+    opiton: optionReducer,
   },
-);
+});
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;

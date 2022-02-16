@@ -1,41 +1,36 @@
-import React from 'react';
-import { Img } from './HaiStyle'
+import React from "react";
+import { Img } from "./HaiStyle";
 
-type HaiType = 'm'|'p'|'s'|'z'
+type HaiType = "m" | "p" | "s" | "z";
 
 type Props = {
-  type: HaiType,
-  number: number,
-  isIcon?: boolean,
-}
+  type: HaiType;
+  number: number;
+  isIcon?: boolean;
+};
 
-export const Hai: React.FC<Props> = ({
-  type = 'm',
-  number = 1,
-  isIcon,
-}) => {
-
+export const Hai: React.FC<Props> = ({ type = "m", number = 1, isIcon }) => {
   const isValidNumberMinMax = (min: number, max: number): boolean => {
-    return (min <= number) && (number <= max)
-  }
+    return min <= number && number <= max;
+  };
 
   const isValidHaiNumber = (): boolean => {
     switch (type) {
-      case 'z':
+      case "z":
         return isValidNumberMinMax(1, 7);
-      case 'm':
-      case 'p':
-      case 's':
+      case "m":
+      case "p":
+      case "s":
         return isValidNumberMinMax(1, 9);
       default:
-        return false
+        return false;
     }
-  }
+  };
 
-  const defaultHaiLink = `/images/hai/m1.png`
-  const haiLink = `/images/hai/${type}${String(number)}.png`
+  const defaultHaiLink = `/images/hai/m1.png`;
+  const haiLink = `/images/hai/${type}${String(number)}.png`;
 
-  const haiSrc = isValidHaiNumber() ? haiLink : defaultHaiLink
+  const haiSrc = isValidHaiNumber() ? haiLink : defaultHaiLink;
 
-  return <Img src={haiSrc} alt={`Hai-${type}-${number}`} isIcon={isIcon}/>
+  return <Img src={haiSrc} alt={`Hai-${type}-${number}`} isIcon={isIcon} />;
 };
