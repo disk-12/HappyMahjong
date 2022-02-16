@@ -28,7 +28,8 @@ import { HaiSelectorPair } from "components/HaiSelectorPair";
 import { DoraItem } from "./components/DoraItem";
 import { Button } from "components/Button";
 import { ButtonText } from "components/Button/ButtonStyle";
-import { MdNavigateNext } from "react-icons/md";
+import { MdAddCircle, MdNavigateNext } from "react-icons/md";
+import { color } from "assets/color";
 
 interface Props {}
 interface HaiProps {
@@ -84,13 +85,17 @@ export const Option: React.FC<Props> = () => {
               initHai={dora}
               onChange={(newDora: HaiProps) => setDora(newDora)}
             />
-            <AddDora
-              onClick={() => {
-                console.log(option.dora);
-                dispatch(addDora(dora));
-              }}
-            >
-              ドラ追加
+            <AddDora>
+              <Button 
+                onClick={() => {
+                  console.log(option.dora);
+                  dispatch(addDora(dora));
+                }}
+                color={color.Border}
+                >
+                <MdAddCircle size={24}/>
+                <ButtonText>ドラ追加</ButtonText>
+              </Button>
             </AddDora>
           </DoraSelector>
           <DoraList>

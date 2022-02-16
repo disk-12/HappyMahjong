@@ -5,7 +5,8 @@ import { ButtonWrapper, LinkWrapper } from './ButtonStyle'
 interface Props {
   to?: string;
   onClick?: () => void;
-  disabled?: boolean
+  disabled?: boolean;
+  color?: string;
 }
 
 export const Button: React.FC<Props> = props => {

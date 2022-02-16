@@ -1,28 +1,32 @@
-import { color } from "assets/color";
+import { color as colorAsset } from "assets/color";
 import styled, { css } from "styled-components";
 
-const wrapperStyle = css`
+type wrapperProps = {
+  color?: string
+}
+
+const wrapperStyle = css<wrapperProps>`
   display: inline-flex;
   align-items: center;
   padding: 8px 12px;
-  color: ${color.MainGreen};
-  background-color: ${color.Surface1};
+  color: ${colorAsset.MainGreen};
+  background-color: ${({ color }) => color || colorAsset.Surface1};
   text-decoration: none;
   border: none;
   border-radius: 16px;
   cursor: pointer;
 
   &:active {
-    background-color: ${color.Selected};
+    background-color: ${colorAsset.Selected};
   }
 
   &:disabled {
     cursor: not-allowed;
-    color: ${color.DisabledMain};
-    background-color: ${color.DisabledBack};
+    color: ${colorAsset.DisabledMain};
+    background-color: ${colorAsset.DisabledBack};
 
     &:active {
-      background-color: ${color.DisabledBack};
+      background-color: ${colorAsset.DisabledBack};
     }
   }
 `
