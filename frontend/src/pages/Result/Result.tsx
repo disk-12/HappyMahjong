@@ -61,6 +61,11 @@ const convertHaiListToTextWithType = (haiList: haiListState, haiType: haiType['t
   return haiText !== '' ? haiText + haiType : ''
 }
 
+const convertDoraToText = (dora: OptionState['dora']): string => {
+  if (dora.length === 0) return ''
+  return 'd' + convertHaiListToText(dora)
+}
+
 export const Result: React.FC<Props> = () => {
   const haiList = useAppSelector(haiListSelector);
   const option = useAppSelector(optionSelector);
