@@ -118,7 +118,11 @@ export const Result: React.FC<Props> = () => {
                   size={32}
                   color={color.Black}
                 />
-                <Ten>{result.ten}<span>点</span></Ten>
+                <Ten>
+                  {result.name && result.name + ' '}
+                  {result.ten}
+                  <span>点</span>
+                </Ten>
               </ResultBox>
             </ResultContainer>
           </>
