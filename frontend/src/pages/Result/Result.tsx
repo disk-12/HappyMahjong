@@ -36,11 +36,12 @@ const convertToText = (haiList: haiListState, option: OptionState): string => {
   const agariHaiList = haiList.slice(-1)
 
   const hai = convertHaiListToText(haiListExceptAgari)
-  const agariHai = '+' + convertHaiListToText(agariHaiList)
-  const dora = '+' + convertDoraToText(option.dora)
-  const opt = '+' + convertOptionToText(option)
+  const agariHai = convertHaiListToText(agariHaiList)
+  const agariHaiWithPlus = agariHai !== '' ? '+' + agariHai : ''
+  const dora = convertDoraToText(option.dora)
+  const opt = convertOptionToText(option)
 
-  const haiText = hai + agariHai + dora + opt
+  const haiText = hai + agariHaiWithPlus + dora + opt
   console.log(haiText)
 
   return haiText;
@@ -63,14 +64,15 @@ const convertHaiListToTextWithType = (haiList: haiListState, haiType: haiType['t
 
 const convertDoraToText = (dora: OptionState['dora']): string => {
   if (dora.length === 0) return ''
-  return 'd' + convertHaiListToText(dora)
+  return '+d' + convertHaiListToText(dora)
 }
 
 const convertOptionToText = (option: OptionState): string => {
-  return option.riichi ? 'r' : ''
+  const opt = option.riichi ? 'r' : ''
     + option.ippatsu ? 'i' : ''
     + option.haitei || option.houtei ? 'h' : ''
     + option.chankan || option.rinshan ? 'k' : ''
+  return opt !== '' ? '+' + opt : ''
 }
 
 export const Result: React.FC<Props> = () => {
