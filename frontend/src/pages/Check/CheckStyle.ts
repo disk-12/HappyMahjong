@@ -21,6 +21,8 @@ export const HaiBox = styled.div`
   flex-direction: column;
   margin-top: 20px;
 `;
+export const ImgBox = styled.img`
+`;
 export const Img = styled.img`
   display: block;
   top: 0;

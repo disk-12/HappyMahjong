@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector } from "../../app/HaiListSlice";
+import { cameraSelector } from "app/CameraSlice";
 import { setLastIndex } from "../../app/OptionSlice";
 import { Hai } from "components/Hai";
 import { Button } from "components/Button";
@@ -24,12 +25,13 @@ export const Select: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
   const haiList = useAppSelector(haiListSelector);
   const option = useAppSelector(optionSelector);
+  const camera = useAppSelector(cameraSelector);
   const [selected, setSelected] = useState(-1);
-  console.log(option.lastIndex)
+  console.log(option.lastIndex);
 
   return (
     <CheckPage>
-      <Img src="/testimg.png" />
+      <Img src={camera.base64String} />
       <HaiContainer>
         {haiList.map((hai, i) => (
           <HaiBox key={i}>
@@ -56,7 +58,7 @@ export const Select: React.FC<Props> = () => {
       <LinkContainer>
         <Button to="/option">
           <ButtonText>オプションへ</ButtonText>
-          <MdNavigateNext size={24}/>
+          <MdNavigateNext size={24} />
         </Button>
       </LinkContainer>
       <HelpMessage page="select" />
