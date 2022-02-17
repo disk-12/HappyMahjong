@@ -28,8 +28,22 @@ interface ResultState {
   ko: number[];
   error: boolean;
 }
-const convert = (haiList: haiListState, option: OptionState) => {
-  return "112233456789m11s";
+
+const convertToText = (haiList: haiListState, option: OptionState): string => {
+  console.log(haiList)
+
+  const haiListExceptAgari = haiList.slice(0,-1)
+  const agariHaiList = haiList.slice(-1)
+
+  const hai = convertHaiListToText(haiListExceptAgari)
+  const agariHai = '+' + convertHaiListToText(agariHaiList)
+  const dora = '+' + convertDoraToText(option.dora)
+  const opt = '+' + convertOptionToText(option)
+
+  const haiText = hai + agariHai + dora + opt
+  console.log(haiText)
+
+  return haiText;
 };
 
 export const Result: React.FC<Props> = () => {
@@ -38,7 +52,7 @@ export const Result: React.FC<Props> = () => {
   const [result, setResult] = useState<ResultState | null>(null);
 
   useEffect(() => {
-    const riichi = new Riichi(convert(haiList, option));
+    const riichi = new Riichi(convertToText(haiList, option));
     setResult(riichi.calc());
   }, [haiList, option]);
 
