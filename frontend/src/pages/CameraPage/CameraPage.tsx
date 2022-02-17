@@ -2,7 +2,6 @@ import { FC, useRef } from "react";
 import { MdOutlineCameraAlt, MdFlipCameraAndroid } from 'react-icons/md';
 import { color } from "assets/color";
 import { Camera, CameraHandles } from "./components/Camera";
-import { useNavigate } from "react-router-dom";
 import {
   Wrapper,
   CameraWrapper,
@@ -13,11 +12,8 @@ import {
 
 export const CameraPage: FC = () => {
   const cameraRef = useRef<CameraHandles>(null);
-  const navigate = useNavigate();
   const takeCapture = () => {
     cameraRef.current?.capture();
-
-    navigate("/check");
   };
 
   const switchCamera = () => {
