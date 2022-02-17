@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/store";
-import { haiListSelector, reset, addAll, change } from "../../app/HaiListSlice";
+import { haiListSelector, change } from "../../app/HaiListSlice";
 import { HaiSelectPopup } from "components/HaiSelectPopup";
 import { Hai } from "components/Hai";
 import { Button } from "components/Button";
