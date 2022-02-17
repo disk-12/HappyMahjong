@@ -37,7 +37,7 @@ const convertToText = (haiList: haiListState, option: OptionState): string => {
 
   const hai = convertHaiListToText(haiListExceptAgari)
   const agariHai = convertHaiListToText(agariHaiList)
-  const agariHaiWithPlus = agariHai !== '' ? '+' + agariHai : ''
+  const agariHaiWithPlus = agariHai && '+' + agariHai
   const dora = convertDoraToText(option.dora)
   const opt = convertOptionToText(option)
 
@@ -59,7 +59,7 @@ const convertHaiListToTextWithType = (haiList: haiListState, haiType: haiType['t
   const haiText = [...haiList].filter(({ type }) => type === haiType ).reduce((sum, current) => {
     return sum + String(current.number)
   }, '')
-  return haiText !== '' ? haiText + haiType : ''
+  return haiText && haiText + haiType
 }
 
 const convertDoraToText = (dora: OptionState['dora']): string => {
@@ -72,7 +72,7 @@ const convertOptionToText = (option: OptionState): string => {
     + option.ippatsu ? 'i' : ''
     + option.haitei || option.houtei ? 'h' : ''
     + option.chankan || option.rinshan ? 'k' : ''
-  return opt !== '' ? '+' + opt : ''
+  return opt && '+' + opt
 }
 
 export const Result: React.FC<Props> = () => {
