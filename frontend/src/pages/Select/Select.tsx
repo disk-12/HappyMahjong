@@ -12,6 +12,7 @@ import {
   HaiBox,
   HaiContainer,
   Img,
+  ImgBox,
   LinkContainer,
   TextPopup,
   Triganle,
@@ -31,7 +32,9 @@ export const Select: React.FC<Props> = () => {
 
   return (
     <CheckPage>
-      <Img src={camera.base64String} />
+      <ImgBox>
+        <Img src={camera.base64String} />
+      </ImgBox>
       <HaiContainer>
         {haiList.map((hai, i) => (
           <HaiBox key={i}>

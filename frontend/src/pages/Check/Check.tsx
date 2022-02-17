@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/store";
 import { haiListSelector, reset, addAll, change } from "../../app/HaiListSlice";
 import { HaiSelectPopup } from "components/HaiSelectPopup";
@@ -43,32 +43,12 @@ export const Check: React.FC<Props> = () => {
     return Math.min(selected * haiWidth, maxWidth - 512);
   };
 
-  //TODO:useEffectはTensolflow.jsが動いた後，削除
-  useEffect(() => {
-    dispatch(reset());
-    dispatch(
-      addAll([
-        { number: 1, type: "m" },
-        { number: 2, type: "m" },
-        { number: 3, type: "m" },
-        { number: 4, type: "m" },
-        { number: 6, type: "m" },
-        { number: 7, type: "m" },
-        { number: 8, type: "m" },
-        { number: 9, type: "m" },
-        { number: 2, type: "p" },
-        { number: 3, type: "p" },
-        { number: 4, type: "p" },
-        { number: 7, type: "z" },
-        { number: 7, type: "z" },
-        { number: 5, type: "m" },
-      ])
-    );
-  }, [dispatch]);
-
   return (
     <CheckPage>
-      <Img src={camera.base64String} />
+      <ImgBox>
+        <Img src={camera.base64String} />
+      </ImgBox>
+
       <HaiContainer>
         {haiList.map((hai, i) => (
           <HaiBox key={i} ref={haiRef}>

@@ -21,12 +21,19 @@ export const HaiBox = styled.div`
   flex-direction: column;
   margin-top: 20px;
 `;
+export const ImgBox = styled.div`
+  height:120px;
+  overflow:hidden;
+  position: relative;
+`;
 export const Img = styled.img`
+  position:absolute;
   display: block;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+
+  transform: translate(0, -50%);
   object-fit: contain;
   object-position: center;
 `;
