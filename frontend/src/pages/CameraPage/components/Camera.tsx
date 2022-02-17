@@ -39,20 +39,51 @@ const Component: ForwardRefRenderFunction<CameraHandles> = (_, ref) => {
     uploadResizeImage(imageSrc);
   };
 
-  const uploadResizeImage = (imageSrc: string) => {
+  const uploadResizeImage = async (imageSrc: string) => {
     if(!wrapperRef.current) return null;
     const width = wrapperRef.current.clientWidth
     const height = wrapperRef.current.clientHeight
     const aspectRatio = height / width
-    const base64 = cropAndResizeB64(imageSrc, aspectRatio)
+    const base64 = await cropAndResizeB64(imageSrc, aspectRatio)
     console.log(base64)
 
     // TODO: upload data:image/jpeg;base64 file
 
   }
 
-  const cropAndResizeB64 = (imgB64_src: string, aspectRatio: number): string => {
-    return 'data:image/jpeg;base64,xxx...'
+  const cropAndResizeB64 = async (imgB64_src: string, aspectRatio: number): Promise<string | null> => {
+    const canvas = document.createElement('canvas');
+    canvas.width = CROP_WIDTH;
+    canvas.height = CROP_HEIGHT;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return null;
+
+    const img = await loadImage(imgB64_src)
+    const isHorizontaly = aspectRatio < 1.000
+
+    if (isHorizontaly) {
+      const height = CROP_WIDTH * aspectRatio
+      const y = (CROP_HEIGHT - height) / 2
+      ctx.drawImage(img, 0, y, CROP_WIDTH, height);
+    } else {
+      const width = CROP_HEIGHT / aspectRatio
+      const x = (CROP_WIDTH - width) / 2
+      ctx.drawImage(img, x, 0, width, CROP_HEIGHT);
+    }
+
+    const imgType = imgB64_src.substring(5, imgB64_src.indexOf(";"));
+    const imgB64_dst = canvas.toDataURL(imgType);
+    return imgB64_dst;
+  }
+
+  const loadImage = (imgB64_src: string) => {
+    return new Promise((resolve: (img: HTMLImageElement) => void, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = (e) => reject(e);
+      img.src = imgB64_src
+    });
   }
 
   const switchCamera = useCallback(() => {
