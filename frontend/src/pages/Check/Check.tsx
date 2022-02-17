@@ -11,12 +11,14 @@ import {
   HaiBox,
   HaiContainer,
   Img,
+  ImgBox,
   LinkContainer,
   PopupContainer,
   PopupSpace,
   Triganle,
 } from "./CheckStyle";
 import { HelpMessage } from "components/HelpMessage";
+import { cameraSelector } from "app/CameraSlice";
 
 interface Props {}
 interface HaiState {
@@ -26,6 +28,8 @@ interface HaiState {
 export const Check: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
   const haiList = useAppSelector(haiListSelector);
+
+  const camera = useAppSelector(cameraSelector);
   const [selected, setSelected] = useState(-1);
   const haiRef = useRef<HTMLDivElement>(null);
   const popupRef = useRef<HTMLDivElement>(null);
@@ -64,7 +68,7 @@ export const Check: React.FC<Props> = () => {
 
   return (
     <CheckPage>
-      <Img src="/testimg.png" />
+      <Img src={camera.base64String} />
       <HaiContainer>
         {haiList.map((hai, i) => (
           <HaiBox key={i} ref={haiRef}>
@@ -94,7 +98,7 @@ export const Check: React.FC<Props> = () => {
       <LinkContainer>
         <Button to="/select">
           <ButtonText>和了牌選択へ</ButtonText>
-          <MdNavigateNext size={24}/>
+          <MdNavigateNext size={24} />
         </Button>
       </LinkContainer>
       <HelpMessage page="check" />

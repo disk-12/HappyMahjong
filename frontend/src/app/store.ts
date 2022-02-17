@@ -1,12 +1,14 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import haiListReducer from "./HaiListSlice";
 import optionReducer from "./OptionSlice";
+import cameraReducer from "./CameraSlice"
 
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 export const store = configureStore({
   reducer: {
     haiList: haiListReducer,
     opiton: optionReducer,
+    camera: cameraReducer
   },
 });
 
