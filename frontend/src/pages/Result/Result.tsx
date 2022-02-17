@@ -8,7 +8,7 @@ import { ButtonText } from "components/Button/ButtonStyle";
 import { Hai } from "components/Hai";
 // state
 import { useAppSelector } from "app/store";
-import { haiListSelector, haiListState } from "app/HaiListSlice";
+import { haiListSelector, haiListState, haiType } from "app/HaiListSlice";
 import { optionSelector, OptionState } from "app/OptionSlice";
 // style
 import { HaiBox, HaiContainer, YakuContainer, YakuBox, ResultContainer, ResultBox, FuAndHan, Ten, ButtonContainer } from "./ResultStyle";
@@ -45,6 +45,21 @@ const convertToText = (haiList: haiListState, option: OptionState): string => {
 
   return haiText;
 };
+
+const convertHaiListToText = (haiList: haiListState): string => {
+  const manz = convertHaiListToTextWithType(haiList, 'm')
+  const souz = convertHaiListToTextWithType(haiList, 's')
+  const pinz = convertHaiListToTextWithType(haiList, 'p')
+  const zihai = convertHaiListToTextWithType(haiList, 'z')
+  return manz + souz + pinz + zihai
+}
+
+const convertHaiListToTextWithType = (haiList: haiListState, haiType: haiType['type']): string => {
+  const haiText = [...haiList].filter(({ type }) => type === haiType ).reduce((sum, current) => {
+    return sum + String(current.number)
+  }, '')
+  return haiText !== '' ? haiText + haiType : ''
+}
 
 export const Result: React.FC<Props> = () => {
   const haiList = useAppSelector(haiListSelector);
