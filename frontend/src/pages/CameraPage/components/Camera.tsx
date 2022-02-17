@@ -7,6 +7,7 @@ import {
   ForwardRefRenderFunction,
 } from "react";
 import { Camera as ReactCamera, CameraType } from "react-camera-pro";
+import { useNavigate } from "react-router-dom";
 import { Wrapper, ScreenShot } from "./CameraStyle";
 
 export interface CameraHandles {
@@ -31,6 +32,7 @@ const Component: ForwardRefRenderFunction<CameraHandles> = (_, ref) => {
   const cameraRef = useRef<CameraType>(null)
   const wrapperRef = useRef<HTMLDivElement | null>(null)
   const [url, setUrl] = useState<string | undefined>(undefined)
+  const navigate = useNavigate();
 
   const capture = () => {
     if (!cameraRef.current) return;
@@ -48,7 +50,7 @@ const Component: ForwardRefRenderFunction<CameraHandles> = (_, ref) => {
     console.log(base64)
 
     // TODO: upload data:image/jpeg;base64 file
-
+    navigate("/check");
   }
 
   const cropAndResizeB64 = async (imgB64_src: string, aspectRatio: number): Promise<string | null> => {
