@@ -66,6 +66,13 @@ const convertDoraToText = (dora: OptionState['dora']): string => {
   return 'd' + convertHaiListToText(dora)
 }
 
+const convertOptionToText = (option: OptionState): string => {
+  return option.riichi ? 'r' : ''
+    + option.ippatsu ? 'i' : ''
+    + option.haitei || option.houtei ? 'h' : ''
+    + option.chankan || option.rinshan ? 'k' : ''
+}
+
 export const Result: React.FC<Props> = () => {
   const haiList = useAppSelector(haiListSelector);
   const option = useAppSelector(optionSelector);
