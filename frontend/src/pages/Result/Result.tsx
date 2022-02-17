@@ -8,7 +8,7 @@ import { ButtonText } from "components/Button/ButtonStyle";
 import { Hai } from "components/Hai";
 // state
 import { useAppSelector } from "app/store";
-import { haiListSelector, haiListState } from "app/HaiListSlice";
+import { haiListSelector, haiListState, haiType } from "app/HaiListSlice";
 import { optionSelector, OptionState } from "app/OptionSlice";
 // style
 import { HaiBox, HaiContainer, YakuContainer, YakuBox, ResultContainer, ResultBox, FuAndHan, Ten, ButtonContainer } from "./ResultStyle";
@@ -28,9 +28,52 @@ interface ResultState {
   ko: number[];
   error: boolean;
 }
-const convert = (haiList: haiListState, option: OptionState) => {
-  return "112233456789m11s";
+
+const convertToText = (haiList: haiListState, option: OptionState): string => {
+  console.log(haiList)
+
+  const haiListExceptAgari = haiList.slice(0,-1)
+  const agariHaiList = haiList.slice(-1)
+
+  const hai = convertHaiListToText(haiListExceptAgari)
+  const agariHai = convertHaiListToText(agariHaiList)
+  const agariHaiWithPlus = agariHai !== '' ? '+' + agariHai : ''
+  const dora = convertDoraToText(option.dora)
+  const opt = convertOptionToText(option)
+
+  const haiText = hai + agariHaiWithPlus + dora + opt
+  console.log(haiText)
+
+  return haiText;
 };
+
+const convertHaiListToText = (haiList: haiListState): string => {
+  const manz = convertHaiListToTextWithType(haiList, 'm')
+  const souz = convertHaiListToTextWithType(haiList, 's')
+  const pinz = convertHaiListToTextWithType(haiList, 'p')
+  const zihai = convertHaiListToTextWithType(haiList, 'z')
+  return manz + souz + pinz + zihai
+}
+
+const convertHaiListToTextWithType = (haiList: haiListState, haiType: haiType['type']): string => {
+  const haiText = [...haiList].filter(({ type }) => type === haiType ).reduce((sum, current) => {
+    return sum + String(current.number)
+  }, '')
+  return haiText !== '' ? haiText + haiType : ''
+}
+
+const convertDoraToText = (dora: OptionState['dora']): string => {
+  if (dora.length === 0) return ''
+  return '+d' + convertHaiListToText(dora)
+}
+
+const convertOptionToText = (option: OptionState): string => {
+  const opt = option.riichi ? 'r' : ''
+    + option.ippatsu ? 'i' : ''
+    + option.haitei || option.houtei ? 'h' : ''
+    + option.chankan || option.rinshan ? 'k' : ''
+  return opt !== '' ? '+' + opt : ''
+}
 
 export const Result: React.FC<Props> = () => {
   const haiList = useAppSelector(haiListSelector);
@@ -38,7 +81,7 @@ export const Result: React.FC<Props> = () => {
   const [result, setResult] = useState<ResultState | null>(null);
 
   useEffect(() => {
-    const riichi = new Riichi(convert(haiList, option));
+    const riichi = new Riichi(convertToText(haiList, option));
     setResult(riichi.calc());
   }, [haiList, option]);
 

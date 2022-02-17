@@ -40,9 +40,16 @@ const haiListSlice = createSlice({
     reset: (state) => {
       return [];
     },
-    //TODO:ソート機能未実装
     sort: (state) => {
-      return state;
+      return [...state].sort((a, b) => {
+        //typeのアルファベット昇順
+        if(a.type > b.type) return 1;
+        if(a.type < b.type) return -1;
+        //numberの降順
+        if(a.number > b.number) return 1;
+        if(a.number < b.number) return -1;
+        return 0;
+      });
     },
   },
 });
