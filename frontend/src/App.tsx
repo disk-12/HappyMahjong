@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
-import { Top, Result, Check, CameraPage, Select, Option } from "./pages";
+import { Top, Result, Check, CameraPage, Select, Option, Load } from "./pages";
 const Background = styled.div`
   width: 100%;
   height: 100%;
@@ -21,6 +21,7 @@ export const App = () => {
           <Route path="/option" element={<Option />} />
           <Route path="/result" element={<Result />} />
           <Route path="/camera" element={<CameraPage />} />
+          <Route path="/load" element={<Load />} />
         </Routes>
       </BrowserRouter>
     </Background>

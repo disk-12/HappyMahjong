@@ -54,7 +54,7 @@ const Component: ForwardRefRenderFunction<CameraHandles> = (_, ref) => {
     console.log(base64);
     dispatch(setImage(base64 ? base64 : undefined));
 
-    navigate("/check");
+    navigate("/load");
   };
 
   const cropAndResizeB64 = async (
