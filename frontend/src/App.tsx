@@ -1,4 +1,5 @@
 import { color } from "assets/color";
+import { DemoCameraPage } from "pages/DemoCamera/DemoCameraPage";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
@@ -22,6 +23,7 @@ export const App = () => {
           <Route path="/result" element={<Result />} />
           <Route path="/camera" element={<CameraPage />} />
           <Route path="/load" element={<Load />} />
+          <Route path="/demo" element={<DemoCameraPage />} />
         </Routes>
       </BrowserRouter>
     </Background>

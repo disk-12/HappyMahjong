@@ -33,17 +33,19 @@ export const Load: React.FC<Props> = () => {
     (async () => {
       await model.executeAsync(x).then((y) => {
         const result = y as tf.Tensor<tf.Rank>[];
-        const confidence = result[0].arraySync() as Array<number>;
-        const type = result[2].arraySync() as Array<Array<number>>;
+        const [confidence] = result[0].arraySync() as Array<Array<number>>;
+        const [type] = result[2].arraySync() as Array<Array<Array<number>>>;
         console.log(confidence);
         dispatch(reset());
+        let success = 0;
         for (let i = 0; i < confidence.length; i++) {
+          console.log(confidence[i]);
           if (confidence[i] > THRESHOLD) {
             dispatch(add(convertIdToHaiType(maxIndex2(type[i]))));
+            success++;
           } else break;
         }
-        const len = haiList.length;
-        for (let i = 0; i < 14 - len; i++)
+        for (let i = 0; i < 14 - success; i++)
           dispatch(add({ type: "m", number: 1 }));
         navigate("/check");
       });

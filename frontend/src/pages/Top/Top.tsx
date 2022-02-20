@@ -30,15 +30,28 @@ export const Top: React.FC<Props> = () => {
     left: 50%;
     transform: translate(-50%, 0);
     bottom: 78px;
+    display: flex;
+    align-items: center;
+  `;
+  const ButtonBox = styled.div`
+    margin: 0 8px;
   `;
   return (
     <>
       <Title>麻雀計算</Title>
       <LinkBox>
-        <Button to="/camera">
-          <ButtonText>開始する</ButtonText>
-          <MdNavigateNext size={24}/>
-        </Button>
+        <ButtonBox>
+          <Button to="/camera">
+            <ButtonText>開始する</ButtonText>
+            <MdNavigateNext size={24} />
+          </Button>
+        </ButtonBox>
+        <ButtonBox>
+          <Button to="/demo">
+            <ButtonText>デモ</ButtonText>
+            <MdNavigateNext size={24} />
+          </Button>
+        </ButtonBox>
       </LinkBox>
     </>
   );

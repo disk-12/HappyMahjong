@@ -5,3 +5,4 @@ export { CameraPage } from "./CameraPage/CameraPage";
 export { Select } from "./Select/Select";
 export { Option } from "./Option/Option";
 export { Load} from "./Load/Load";
+export {DemoCameraPage} from "./DemoCamera/DemoCameraPage"
