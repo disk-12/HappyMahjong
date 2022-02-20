@@ -11,7 +11,7 @@ export const Panel = styled.div`
   border-radius: 16px;
   padding: 20px 48px;
   max-height: calc(100vh - 164px);
-  overflow: scroll;
+  overflow: auto;
 `;
 
 export const LinkContainer = styled.div`
