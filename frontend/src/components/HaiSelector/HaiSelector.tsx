@@ -21,6 +21,7 @@ type WindowProps = {
   type: HaiType;
   selected: number;
   onClick: Function;
+  option: boolean;
 };
 
 type HaiSelectorProps = {
@@ -28,6 +29,7 @@ type HaiSelectorProps = {
   type?: HaiType;
   initSelected: number;
   onChange?: Function;
+  option?: boolean;
 };
 
 const typeKanji = ["萬子", "筒子", "索子", "字牌"];
@@ -53,6 +55,7 @@ const HaiSelectorWindow: React.FC<WindowProps> = ({
   type = "m",
   selected,
   onClick,
+  option,
 }) => {
   const itemList = [];
   if (isType) {
@@ -68,7 +71,12 @@ const HaiSelectorWindow: React.FC<WindowProps> = ({
       });
   }
   return (
-    <div className="HaiSelector__window">
+    <div
+      className={classNames({
+        HaiSelector__window: !option,
+        "HaiSelector__window--option": option,
+      })}
+    >
       {itemList.map((x, index) => (
         <div
           className={classNames("HaiSelector__item", {
@@ -89,6 +97,7 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
   type = "m",
   initSelected,
   onChange,
+  option = false,
 }) => {
   const [selected, setSelected] = useState(initSelected);
   const [text, setText] = useState(
@@ -134,6 +143,7 @@ export const HaiSelector: React.FC<HaiSelectorProps> = ({
             type={type}
             selected={selected}
             onClick={onClick}
+            option={option}
           />
         )}
         <div className="HaiSelector__panel" onClick={() => setIsShown(true)}>
