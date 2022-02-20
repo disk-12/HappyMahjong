@@ -6,6 +6,7 @@ import { MdArrowForward, MdCalculate, MdOutlineCameraAlt } from "react-icons/md"
 import { Button } from "components/Button";
 import { ButtonText } from "components/Button/ButtonStyle";
 import { Hai } from "components/Hai";
+import { ErrorPage } from "components/ErrorPage";
 // state
 import { useAppSelector } from "app/store";
 import { haiListSelector, haiListState, haiType } from "app/HaiListSlice";
@@ -83,13 +84,34 @@ export const Result: React.FC<Props> = () => {
   useEffect(() => {
     const riichi = new Riichi(convertToText(haiList, option));
     setResult(riichi.calc());
-  }, [haiList, option]);
+    console.log('result', result);
+  }, [haiList, option, result]);
 
   const yakuList = result ? Object.entries(result.yaku).map(([name, han]) => ({name, han})) : []
 
+  const isError = result === null ? true : result.error
+  if ( isError ) {
+    return (
+      <ErrorPage 
+        text="エラー：申し訳ありませんが、もう一度やり直してください。"
+        to="/"
+        toText="トップに戻る"
+      />
+    )
+  }
+
+  if ( !result?.isAgari ) {
+    return (
+      <ErrorPage 
+        text="エラー：和了できない牌です。"
+        to="/"
+        toText="トップに戻る"
+      />
+    )
+  }
+
   return (
     <>
-      {JSON.stringify(result)}
       <HaiContainer>
         {haiList.map((hai, i) => (
           <HaiBox key={i}>
@@ -98,36 +120,35 @@ export const Result: React.FC<Props> = () => {
         ))}
       </HaiContainer>
       { result && (
-         <>
-            <YakuContainer>
-              {yakuList.map((yaku, i) => (
-                <YakuBox key={i}>
-                  <span>{yaku.name}</span>
-                  <span>{yaku.han}</span>
-                </YakuBox>
-              ))}
-            </YakuContainer>
-            <ResultContainer>
-              <ResultBox>
-                <MdCalculate 
-                  size={32}
-                  color={color.Black}
-                />
-                <FuAndHan>{result.fu}符{result.han}飜</FuAndHan>
-                <MdArrowForward
-                  size={32}
-                  color={color.Black}
-                />
-                <Ten>
-                  {result.name && result.name + ' '}
-                  {result.ten}
-                  <span>点</span>
-                </Ten>
-              </ResultBox>
-            </ResultContainer>
-          </>
-        )
-      }
+        <>
+          <YakuContainer>
+            {yakuList.map((yaku, i) => (
+              <YakuBox key={i}>
+                <span>{yaku.name}</span>
+                <span>{yaku.han}</span>
+              </YakuBox>
+            ))}
+          </YakuContainer>
+          <ResultContainer>
+            <ResultBox>
+              <MdCalculate 
+                size={32}
+                color={color.Black}
+              />
+              <FuAndHan>{result.fu}符{result.han}飜</FuAndHan>
+              <MdArrowForward
+                size={32}
+                color={color.Black}
+              />
+              <Ten>
+                {result.name && result.name + ' '}
+                {result.ten}
+                <span>点</span>
+              </Ten>
+            </ResultBox>
+          </ResultContainer>
+        </>
+      )}
       <ButtonContainer>
         <Button to="/">
           <MdOutlineCameraAlt size={24}/>
