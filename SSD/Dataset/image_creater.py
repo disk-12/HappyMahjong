@@ -49,10 +49,10 @@ pieimagepatharr = [
 for p in range(100):
 
     #画像出力先パス
-    outputimagepath = "/Users/hayafune/開発/ハッピー麻雀/HappyMahjong/SSD/Dataset/ImageGenerate_Output/annotaion_image_{}.jpg".format(p)
+    outputimagepath = "/Users/hayafune/開発/ハッピー麻雀/HappyMahjong/SSD/Dataset/ImageGenerate_Output_test/annotaion_image_{}.jpg".format(p)
 
     #xml出力先パス
-    outputxmlpath=  "/Users/hayafune/開発/ハッピー麻雀/HappyMahjong/SSD/Dataset/Xml_Output/annotaion_xml_{}.xml".format(p)
+    outputxmlpath=  "/Users/hayafune/開発/ハッピー麻雀/HappyMahjong/SSD/Dataset/Xml_Output_test/annotaion_xml_{}.xml".format(p)
 
     xml_content = []
 
