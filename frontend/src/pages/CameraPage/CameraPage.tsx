@@ -16,7 +16,7 @@ import { CameraGuide } from "./components/CameraGuide";
 import { Hai } from "components/Hai";
 import { haiType } from "app/HaiListSlice";
 
-const exampleHaiList: haiType[] = [
+export const exampleHaiList: haiType[] = [
   { number: 1, type: 'm' },
   { number: 2, type: 'm' },
   { number: 3, type: 'm' },

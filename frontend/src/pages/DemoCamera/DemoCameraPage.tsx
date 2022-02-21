@@ -12,6 +12,10 @@ import {
 import { useAppDispatch, useAppSelector } from "app/store";
 import { cameraSelector, setImage } from "app/CameraSlice";
 import { useNavigate } from "react-router-dom";
+import { HaiGuide, HaiGuideText, HaiGuideWrapper } from "pages/CameraPage/CameraPageStyle";
+import { exampleHaiList } from "pages/CameraPage/CameraPage";
+import { CameraGuide } from "pages/CameraPage/components/CameraGuide";
+import { Hai } from "components/Hai";
 
 function toDataUrl(url: string, callback: Function) {
   var xhr = new XMLHttpRequest();
@@ -39,6 +43,15 @@ export const DemoCameraPage: FC = () => {
       <CameraWrapper>
         {base64String && <DemoImage src={base64String} alt="demoImage" />}
       </CameraWrapper>
+      <HaiGuide>
+        <HaiGuideWrapper>
+        {exampleHaiList.map((hai, i) => (
+            <Hai {...hai} key={i} size={32}/>
+          ))}
+        </HaiGuideWrapper>
+        <HaiGuideText>例のように並べて、枠内に収まるように撮ってください</HaiGuideText>
+      </HaiGuide>
+      <CameraGuide />
       <ButtonWrapper>
         <SwitchButton onClick={() => {}}>
           <MdFlipCameraAndroid
