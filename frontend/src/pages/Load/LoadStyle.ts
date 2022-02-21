@@ -11,9 +11,7 @@ export const LoadStyle = styled.div`
   gap: 16px;
 `
 
-export const LoaderAnimation = styled.div`
-
-`
+export const LoaderAnimation = styled.div``
 
 export const LoaderInner = styled.div`
   width: 57px;
@@ -33,7 +31,6 @@ export const LoaderInnerCircle = styled.div<circleProps>`
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   display: inline-block;
-  float: left;
   animation-name: ball-grid-pulse;
   animation-iteration-count: infinite;
   animation-delay: 0;

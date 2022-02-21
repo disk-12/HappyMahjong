@@ -1,6 +1,6 @@
 import { cameraSelector } from "app/CameraSlice";
 import { useAppDispatch, useAppSelector } from "app/store";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
 
 import { useNavigate } from "react-router-dom";
