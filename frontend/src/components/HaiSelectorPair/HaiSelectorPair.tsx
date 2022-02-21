@@ -5,12 +5,16 @@ type HaiProps = {
   type: HaiType;
   number: number;
 };
-type Props = { initHai: HaiProps; onChange: Function; windowHeight?: number };
+type Props = { initHai: HaiProps; onChange: Function; option?: boolean };
 type HaiType = "m" | "p" | "s" | "z";
 
 const typeList = ["m", "p", "s", "z"] as HaiType[];
 const Type2Index = { m: 0, p: 1, s: 2, z: 3 };
-export const HaiSelectorPair: React.FC<Props> = ({ initHai, onChange }) => {
+export const HaiSelectorPair: React.FC<Props> = ({
+  initHai,
+  onChange,
+  option = false,
+}) => {
   const [type, setType] = useState(initHai.type);
   const [number, setNumber] = useState(initHai.number);
 
@@ -25,6 +29,7 @@ export const HaiSelectorPair: React.FC<Props> = ({ initHai, onChange }) => {
         <HaiSelector
           isType
           initSelected={Type2Index[type]}
+          option={option}
           onChange={(index: number) => {
             if (index === 3 && number >= 7)
               onChange({ type: typeList[index], number: 1 });
@@ -36,6 +41,7 @@ export const HaiSelectorPair: React.FC<Props> = ({ initHai, onChange }) => {
         <HaiSelector
           type={type}
           initSelected={number - 1}
+          option={option}
           onChange={(index: number) => {
             onChange({ type, number: index + 1 });
           }}

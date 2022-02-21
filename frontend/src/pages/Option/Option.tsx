@@ -84,6 +84,7 @@ export const Option: React.FC<Props> = () => {
             <HaiSelectorPair
               initHai={dora}
               onChange={(newDora: HaiProps) => setDora(newDora)}
+              option={true}
             />
             <AddDora>
               <Button 

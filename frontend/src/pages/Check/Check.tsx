@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/store";
-import { haiListSelector, change } from "../../app/HaiListSlice";
+import { haiListSelector, change, haiType } from "../../app/HaiListSlice";
 import { HaiSelectPopup } from "components/HaiSelectPopup";
 import { Hai } from "components/Hai";
 import { Button } from "components/Button";
@@ -21,10 +21,7 @@ import { HelpMessage } from "components/HelpMessage";
 import { cameraSelector } from "app/CameraSlice";
 
 interface Props {}
-interface HaiState {
-  type: "m" | "p" | "s" | "z";
-  number: number;
-}
+
 export const Check: React.FC<Props> = () => {
   const dispatch = useAppDispatch();
   const haiList = useAppSelector(haiListSelector);
@@ -69,7 +66,7 @@ export const Check: React.FC<Props> = () => {
             }
             onClose={() => setSelected(-1)}
             disable={selected === -1}
-            onChange={(hai: HaiState) => {
+            onChange={(hai: haiType) => {
               dispatch(change({ index: selected, hai }));
             }}
           />
