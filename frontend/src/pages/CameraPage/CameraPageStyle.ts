@@ -15,9 +15,11 @@ export const CameraWrapper = styled.div`
   background: ${color.MainGreen};
 `
 
+export const BUTTON_WRAPPER_WIDTH = 48;
+
 export const ButtonWrapper = styled.div`
   position: relative;
-  width: 48px;
+  width: ${BUTTON_WRAPPER_WIDTH}px;
   height: 100%;
   display: flex;
   flex-direction: column;

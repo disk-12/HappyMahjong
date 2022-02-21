@@ -9,6 +9,7 @@ import {
   CaptureButton,
   SwitchButton
 } from './CameraPageStyle'
+import { CameraGuide } from "./components/CameraGuide";
 
 export const CameraPage: FC = () => {
   const cameraRef = useRef<CameraHandles>(null);
@@ -33,6 +34,7 @@ export const CameraPage: FC = () => {
           </li>
         ))}
       </ul> */}
+      <CameraGuide />
       <ButtonWrapper>
         <SwitchButton onClick={() => switchCamera()}>
           <MdFlipCameraAndroid size={24} color={color.MainGreen} title="Flip camera"/>
