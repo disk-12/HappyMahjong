@@ -7,9 +7,31 @@ import {
   CameraWrapper,
   ButtonWrapper,
   CaptureButton,
-  SwitchButton
+  SwitchButton,
+  HaiGuide,
+  HaiGuideWrapper,
+  HaiGuideText
 } from './CameraPageStyle'
 import { CameraGuide } from "./components/CameraGuide";
+import { Hai } from "components/Hai";
+import { haiType } from "app/HaiListSlice";
+
+const exampleHaiList: haiType[] = [
+  { number: 1, type: 'm' },
+  { number: 2, type: 'm' },
+  { number: 3, type: 'm' },
+  { number: 4, type: 'm' },
+  { number: 6, type: 'm' },
+  { number: 7, type: 'm' },
+  { number: 8, type: 'm' },
+  { number: 9, type: 'm' },
+  { number: 1, type: 's' },
+  { number: 2, type: 's' },
+  { number: 3, type: 's' },
+  { number: 7, type: 'z' },
+  { number: 7, type: 'z' },
+  { number: 5, type: 'm' },
+]
 
 export const CameraPage: FC = () => {
   const cameraRef = useRef<CameraHandles>(null);
@@ -26,14 +48,14 @@ export const CameraPage: FC = () => {
       <CameraWrapper>
         <Camera ref={cameraRef} />
       </CameraWrapper>
-      {/* <ul>
-        {haiList.map((x) => (
-          <li>
-            {x.number}
-            {x.type}
-          </li>
-        ))}
-      </ul> */}
+      <HaiGuide>
+        <HaiGuideWrapper>
+        {exampleHaiList.map((hai, i) => (
+            <Hai {...hai} key={i} size={32}/>
+          ))}
+        </HaiGuideWrapper>
+        <HaiGuideText>例のように並べて、枠内に収まるように撮ってください</HaiGuideText>
+      </HaiGuide>
       <CameraGuide />
       <ButtonWrapper>
         <SwitchButton onClick={() => switchCamera()}>
