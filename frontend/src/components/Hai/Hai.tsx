@@ -7,9 +7,10 @@ type Props = {
   type: HaiType;
   number: number;
   isIcon?: boolean;
+  size?: number;
 };
 
-export const Hai: React.FC<Props> = ({ type = "m", number = 1, isIcon }) => {
+export const Hai: React.FC<Props> = ({ type = "m", number = 1, isIcon, size }) => {
   const isValidNumberMinMax = (min: number, max: number): boolean => {
     return min <= number && number <= max;
   };
@@ -32,5 +33,5 @@ export const Hai: React.FC<Props> = ({ type = "m", number = 1, isIcon }) => {
 
   const haiSrc = isValidHaiNumber() ? haiLink : defaultHaiLink;
 
-  return <Img src={haiSrc} alt={`Hai-${type}-${number}`} isIcon={isIcon} />;
+  return <Img src={haiSrc} alt={`Hai-${type}-${number}`} isIcon={isIcon} size={size} />;
 };

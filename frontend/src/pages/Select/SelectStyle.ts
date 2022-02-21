@@ -21,15 +21,18 @@ export const HaiBox = styled.div`
   flex-direction: column;
   margin-top: 20px;
 `;
+
+const IMG_HEIGHT = 120
+
 export const ImgBox = styled.div`
-  height:120px;
+  height:${IMG_HEIGHT}px;
   overflow:hidden;
   position: relative;
 `;
 export const Img = styled.img`
   position:absolute;
   display: block;
-  top: 0;
+  top: ${IMG_HEIGHT / 2}px;
   left: 0;
   width: 100%;
 
