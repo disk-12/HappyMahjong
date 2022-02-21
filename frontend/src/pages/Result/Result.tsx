@@ -84,8 +84,7 @@ export const Result: React.FC<Props> = () => {
   useEffect(() => {
     const riichi = new Riichi(convertToText(haiList, option));
     setResult(riichi.calc());
-    console.log('result', result);
-  }, [haiList, option, result]);
+  }, [haiList, option]);
 
   const yakuList = result ? Object.entries(result.yaku).map(([name, han]) => ({name, han})) : []
 

@@ -5,6 +5,7 @@ import * as tf from "@tensorflow/tfjs";
 
 import { useNavigate } from "react-router-dom";
 import { add, haiListSelector, reset } from "app/HaiListSlice";
+import { LoaderAnimation, LoaderInner, LoaderInnerCircle, LoadingText, LoadStyle } from "./LoadStyle";
 interface Props {}
 
 const THRESHOLD = 0.5;
@@ -12,6 +13,7 @@ const THRESHOLD = 0.5;
 const maxIndex2 = (a: number[]): number => {
   return a.indexOf(Math.max(...a));
 };
+
 function convertIdToHaiType(id: number): {
   type: "m" | "p" | "s" | "z";
   number: number;
@@ -20,6 +22,7 @@ function convertIdToHaiType(id: number): {
   const number = (id % 9) + 1;
   return { type, number };
 }
+
 export const Load: React.FC<Props> = () => {
   const camera = useAppSelector(cameraSelector);
   const navigate = useNavigate();
@@ -66,5 +69,20 @@ export const Load: React.FC<Props> = () => {
     } else navigate("/");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [camera.base64String]);
-  return <div>計算中</div>;
+
+  const circleList = Array(9)
+  circleList.fill(0)
+
+  return (
+    <LoadStyle>
+      <LoaderAnimation>
+        <LoaderInner>
+          {circleList.map((_x, index) => (
+            <LoaderInnerCircle key={index} delay={Math.random() - 0.2} duration={Math.random() + 0.6}/>
+          ))}
+        </LoaderInner>
+      </LoaderAnimation>
+      <LoadingText>Calculate...</LoadingText>
+    </LoadStyle>
+  );
 };
