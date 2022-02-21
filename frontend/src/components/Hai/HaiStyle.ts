@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 type ImgProps = {
   isIcon?: boolean;
+  size?: number;
 };
 
 const defaultStyles = css`
@@ -17,7 +18,13 @@ const isIconStyles = css`
   object-position: center;
 `;
 
+const iconSize = css<ImgProps>`
+  width: ${({size}) => size}px;
+  ${({isIcon, size}) => isIcon && `height: ${size}px`};
+`
+
 export const Img = styled.img<ImgProps>`
   display: block;
   ${({ isIcon }) => (isIcon ? isIconStyles : defaultStyles)}
+  ${({ size }) => (size && iconSize)}
 `;
