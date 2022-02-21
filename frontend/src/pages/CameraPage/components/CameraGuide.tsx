@@ -7,7 +7,7 @@ const BORDER = 4;
 const BORDER_LENGTH = 16;
 const BORDER_LENGTH_CENTER = 32;
 const PADDING_X = 120;
-const ASPECT_RATIO = 1 / 5
+const ASPECT_RATIO = 1 / 8
 
 const Wrapper = styled.div`
   position: fixed;
@@ -24,17 +24,18 @@ const Wrapper = styled.div`
 const row = css`
   display: flex;
   justify-content: space-between;
-  align-items: center;
   width: calc(100vw - ${BUTTON_WRAPPER_WIDTH + PADDING_X}px);
   height: calc((100vw - ${BUTTON_WRAPPER_WIDTH + PADDING_X}px) * ${ASPECT_RATIO / 2});
 `
 
 const Top = styled.div`
   ${row}
+  align-items: flex-start;
 `
 
 const Bottom = styled.div`
   ${row}
+  align-items: flex-end;
 `
 
 const kagi = css`
